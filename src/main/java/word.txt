@@ -1,0 +1,74 @@
+{
+    "id": "hibernate",
+    "metadata": {
+        "operation": "retrieve",
+        "provider": "Oxford University Press",
+        "schema": "RetrieveEntry"
+    },
+    "results": [
+        {
+            "id": "hibernate",
+            "language": "en-gb",
+            "lexicalEntries": [
+                {
+                    "entries": [
+                        {
+                            "pronunciations": [
+                                {
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/hibernate_gb_1.mp3",
+                                    "dialects": [
+                                        "British English"
+                                    ],
+                                    "phoneticNotation": "IPA",
+                                    "phoneticSpelling": "ˈhʌɪbəneɪt"
+                                }
+                            ],
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "(of an animal or plant) spend the winter in a dormant state"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "some species hibernate in tree roosts"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0465890.005",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "(of a person) remain inactive or indoors for an extended period"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "the pilots who have been hibernating during the winter months get their gliders out again"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0465890.011"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-gb",
+                    "lexicalCategory": {
+                        "id": "verb",
+                        "text": "Verb"
+                    },
+                    "text": "hibernate"
+                }
+            ],
+            "type": "headword",
+            "word": "hibernate"
+        }
+    ],
+    "word": "hibernate"
+}
+
+Audio link       : https://audio.oxforddictionaries.com/en/mp3/hibernate_gb_1.mp3
+Phonetic Spelling: ˈhʌɪbəneɪt
+
+Definition: (of an animal or plant) spend the winter in a dormant state
+Example   : some species hibernate in tree roosts
+
