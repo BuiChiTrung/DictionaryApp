@@ -9,6 +9,11 @@ import org.apache.http.impl.client.HttpClients;
 
 public class GoogleApi {
 
+    /**
+     * test Google translate Api with a word (tùy chỉnh word ở cuối cái link )
+     * @param args nothing
+     * @throws Exception
+     */
     public static void main(String args[]) throws Exception {
 
         //Creating a HttpClient object

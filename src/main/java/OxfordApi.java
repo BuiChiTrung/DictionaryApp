@@ -12,7 +12,11 @@ import javax.net.ssl.HttpsURLConnection;
 public class OxfordApi {
     private static final String OUT_FILE = "./src/main/java/word.txt";
 
-    // get Oxford URL
+    /**
+     * get OxfordApi URL for an english word.
+     * @param word
+     * @return
+     */
     public String getOxford(String word){
         String language = "en-gb";
         String fields = "definitions%2Cexamples%2Cpronunciations";
@@ -21,7 +25,11 @@ public class OxfordApi {
         return this.doInBackground("https://od-api.oxforddictionaries.com:443/api/v2/entries/" + language + "/" + word_id + "?" + "fields=" + fields + "&strictMatch=" + strictMatch);
     }
 
-    // request Oxford API
+    /**
+     * request URL that we got above.
+     * @param params url
+     * @return json data of requested word
+     */
     private String doInBackground(String... params) {
         final String APP_ID = "5a1fa363";
         final String APP_KEY = "e74771a4ef0d1911c7ee2a863829ed1a";
@@ -52,6 +60,11 @@ public class OxfordApi {
     }
 
 
+    /**
+     * parse json to get definition, examples, phoneticSpelling,... of a word and write down to word.txt
+     * @param jsonString String in json syntax
+     * @throws IOException exception
+     */
     public void parseJsonString(String jsonString) throws IOException {
         FileWriter out_file = new FileWriter(OUT_FILE);
 
@@ -89,6 +102,11 @@ public class OxfordApi {
     }
 
 
+    /**
+     * try OxfordApi with a word.
+     * @param args nothing
+     * @throws IOException exception
+     */
     public static void main(String[] args) throws IOException {
        OxfordApi instance = new OxfordApi();
 
