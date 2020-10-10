@@ -1,3 +1,4 @@
+### package: backend
 1. AddFileToDb: add file text postgresql 
 db
 2. Word: class từ 
@@ -8,3 +9,6 @@ db
 7. database.txt: file từ vựng 
 8. data.txt : file nhỏ trong database.txt để test code 
 9. word.txt : data lấy từ OxfordApi 
+10. straw_localhost-2020_10_09_18_55_05-dump.sql: database sau khi đc export
+
+### package: sample - Giao diện 

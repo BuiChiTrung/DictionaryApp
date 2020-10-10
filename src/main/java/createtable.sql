@@ -1,5 +1,0 @@
-CREATE TABLE words (
-    id SERIAL PRIMARY KEY,
-    enWord VARCHAR NOT NULL,
-    viWord VARCHAR NOT NULL
-);
