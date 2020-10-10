@@ -22,16 +22,19 @@
       </HBox>
    </top>
    <left>
-      <VBox prefHeight="467.0" prefWidth="107.0" spacing="20.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="467.0" prefWidth="107.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="0.0" prefWidth="100.0" text="Your dictionary" textAlignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="100.0" text="Your dictionary" textAlignment="CENTER" />
             <ListView fx:id="Dictionary" prefHeight="302.0" prefWidth="107.0" />
-            <HBox prefHeight="33.0" prefWidth="101.0">
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                <children>
-                  <Button mnemonicParsing="false" text="Add" />
-                  <Button mnemonicParsing="false" text="Delete" />
+                  <Button fx:id="searrchButton" mnemonicParsing="false" onAction="#Submit" text="Search" />
+                  <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#Submit" text="Delete" />
+                  <Button fx:id="modifyButton" mnemonicParsing="false" onAction="#Submit" text="Modify" />
+                  <TextField fx:id="addText" />
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#Submit" text="Add" />
                </children>
-            </HBox>
+            </VBox>
          </children>
       </VBox>
    </left>
