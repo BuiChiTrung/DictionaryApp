@@ -6,18 +6,16 @@ import java.util.ArrayList;
 
 
 public class DictionaryManager {
-    private final Connection con;
-    private final Statement st;
-
-    /**
-     * connect dictionary to postgresql db.
-     * @throws SQLException connected fail
-     */
-    public DictionaryManager() throws SQLException {
-        con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/straw", "straw", "Trung123");
-        System.out.println("Connected to PostgreSQL database!");
-
-        st = con.createStatement();
+    private static Connection con;
+    private static Statement st;
+    static {
+        try {
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/straw", "straw", "Trung123");
+            //con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ad", "ad", "555666");
+            st = con.createStatement();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     /**
@@ -27,7 +25,7 @@ public class DictionaryManager {
      * @return true/false
      * @throws SQLException exception
      */
-    public boolean wordInDict (String enWord) throws SQLException {
+    public static boolean wordInDict (String enWord) throws SQLException {
         String command = "SELECT * FROM words WHERE enWord =" + "'" + enWord + "';";
         ResultSet rs = st.executeQuery(command);
 
@@ -41,7 +39,7 @@ public class DictionaryManager {
      * @throws SQLException exception
      * @throws IOException exception
      */
-    public String[] getSingleWord (String enWord) throws SQLException, IOException {
+    public static String[] getSingleWord (String enWord) throws SQLException, IOException {
         String[] response = new String[2];
 
         // get info in database
@@ -55,7 +53,7 @@ public class DictionaryManager {
 
 
         response[0] = apiResponse[0]; // audio link
-        response[1] = dbResponse + apiResponse[1]; // definitions, examples,...
+        response[1] = dbResponse + "OXFORD DICTIONARY:\n" + apiResponse[1]; // definitions, examples,...
 
         rs.close();
         return response;
@@ -67,7 +65,7 @@ public class DictionaryManager {
      * @param subEnWord prefix
      * @throws SQLException exception
      */
-    public ArrayList<String> selectMultipleWords(String subEnWord) throws SQLException{
+    public static ArrayList<String> selectMultipleWords(String subEnWord) throws SQLException{
         ArrayList<String> response = new ArrayList<>();
 
         String firstWord = subEnWord;
@@ -92,8 +90,8 @@ public class DictionaryManager {
      * @param newWord a Word
      * @throws SQLException exception
      */
-    public void addNewWord(Word newWord) throws SQLException {
-        if (this.wordInDict(newWord.getEnWord())) return;
+    public static void addNewWord(Word newWord) throws SQLException {
+        if (wordInDict(newWord.getEnWord())) return;
 
         String command = "INSERT INTO words (enWord, viWord) VALUES" + "('" + newWord.getEnWord() + "','" + newWord.getViWord() + "');";
         st.executeUpdate(command);
@@ -104,7 +102,7 @@ public class DictionaryManager {
      * @param enWord english meaning of the word
      * @throws SQLException exception
      */
-    public void deleteWord(String enWord) throws SQLException {
+    public static void deleteWord(String enWord) throws SQLException {
         String command = "DELETE FROM words WHERE enWord =" + "'" + enWord + "'";
         st.executeUpdate(command);
     }
@@ -115,20 +113,19 @@ public class DictionaryManager {
      * @throws SQLException exception
      */
     public static void main(String[] args) throws SQLException, IOException {
-        DictionaryManager instance = new DictionaryManager();
         //instance.deleteWord("aba");
-        //System.out.println(instance.wordInDict("hate"));
-        //instance.addNewWord(new Word("love", "tìnhyêu"));
+        System.out.println(DictionaryManager.wordInDict("hate"));
+        //DictionaryManager.addNewWord(new Word("love", "tìnhyêu"));
 
-        ArrayList<String> response1 = instance.selectMultipleWords("goo");
+        ArrayList<String> response1 = DictionaryManager.selectMultipleWords("goof");
         for (String str : response1) {
             System.out.println(str);
         }
 
-        String[] response = instance.getSingleWord("happy");
+        String[] response = DictionaryManager.getSingleWord("happy");
         System.out.println(response[0] + '\n' + response[1]);
 
-        instance.con.close();
-        instance.st.close();
+        DictionaryManager.con.close();
+        DictionaryManager.st.close();
     }
 }

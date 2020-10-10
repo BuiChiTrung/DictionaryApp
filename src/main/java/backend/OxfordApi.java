@@ -76,39 +76,43 @@ public class OxfordApi {
             return null;
         }
 
-        String[] oxfordResponse = new String[2];
-        StringBuilder definitions = new StringBuilder();
-        
-        JSONObject jsonObj = new JSONObject(jsonString);
-        //System.out.println(jsonObj);
+        String[] oxfordResponse = {"Not Found", "Not Found"};
+        try {
+            StringBuilder definitions = new StringBuilder();
 
-        JSONObject firstEntry = jsonObj.getJSONArray("results").getJSONObject(0).getJSONArray("lexicalEntries").getJSONObject(0).getJSONArray("entries").getJSONObject(0);
-        //System.out.println(firstEntry);
+            JSONObject jsonObj = new JSONObject(jsonString);
+            //System.out.println(jsonObj);
 
-        JSONObject pronunciations = firstEntry.getJSONArray("pronunciations").getJSONObject(0);
-        String phoneticSpelling = pronunciations.getString("phoneticSpelling");
-        String audioFile = pronunciations.getString("audioFile");
-        oxfordResponse[0] = audioFile;
+            JSONObject firstEntry = jsonObj.getJSONArray("results").getJSONObject(0).getJSONArray("lexicalEntries").getJSONObject(0).getJSONArray("entries").getJSONObject(0);
+            //System.out.println(firstEntry);
 
-        out_file.write(jsonString + '\n');
-        out_file.write("Audio link       : " + audioFile + '\n');
-        out_file.write("Phonetic Spelling: " +phoneticSpelling + '\n' + '\n');
-        definitions.append("Phonetic Spelling: " +phoneticSpelling + '\n' + '\n');
+            JSONObject pronunciations = firstEntry.getJSONArray("pronunciations").getJSONObject(0);
+            String phoneticSpelling = pronunciations.getString("phoneticSpelling");
+            String audioFile = pronunciations.getString("audioFile");
+            oxfordResponse[0] = audioFile;
+
+            out_file.write(jsonString + '\n');
+            out_file.write("Audio link       : " + audioFile + '\n');
+            out_file.write("Phonetic Spelling: " +phoneticSpelling + '\n' + '\n');
+            definitions.append("Phonetic Spelling: " +phoneticSpelling + '\n' + '\n');
 
 
-        JSONArray senses = firstEntry.getJSONArray("senses");
+            JSONArray senses = firstEntry.getJSONArray("senses");
 
-        for (int i = 0; i < senses.length(); ++i) {
-            JSONObject sense = senses.getJSONObject(i);
-            String definition = sense.getJSONArray("definitions").getString(0);//.getJSONObject(0);
-            String examples = sense.getJSONArray("examples").getJSONObject(0).getString("text");
-            out_file.write("Definition: " + definition + '\n');
-            out_file.write("Example   : " + examples + '\n' + '\n');
-            definitions.append("Definition: " + definition + '\n' + "Example   : " + examples + '\n' + '\n');
+            for (int i = 0; i < senses.length(); ++i) {
+                JSONObject sense = senses.getJSONObject(i);
+                String definition = sense.getJSONArray("definitions").getString(0);//.getJSONObject(0);
+                String examples = sense.getJSONArray("examples").getJSONObject(0).getString("text");
+                out_file.write("Definition: " + definition + '\n');
+                out_file.write("Example   : " + examples + '\n' + '\n');
+                definitions.append("Definition: " + definition + '\n' + "Example   : " + examples + '\n' + '\n');
+            }
+            oxfordResponse[1] = definitions.toString();
+        }
+        catch(JSONException e) {
+            System.out.println("Wrong");
         }
         out_file.close();
-
-        oxfordResponse[1] = definitions.toString();
         return oxfordResponse;
     }
 
@@ -119,8 +123,7 @@ public class OxfordApi {
      * @throws IOException exception
      */
     public static void main(String[] args) throws IOException {
-
-       String[] oxfordResponse = OxfordApi.parseJsonString(OxfordApi.getOxford("good"));
+       String[] oxfordResponse = OxfordApi.parseJsonString(OxfordApi.getOxford("word"));
        System.out.println(oxfordResponse[0]);
        System.out.println(oxfordResponse[1]);
     }

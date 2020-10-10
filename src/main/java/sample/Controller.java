@@ -1,9 +1,14 @@
 package sample;
+import backend.DictionaryManager;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.collections.ObservableList;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
 public class Controller {
     @FXML
     private TextField text_field;
@@ -32,13 +37,17 @@ public class Controller {
         translateArea.setWrapText(true);
     }
 
-    public void Submit(ActionEvent event) {
+    public void Submit(ActionEvent event) throws SQLException, IOException {
         if(event.getSource() == translate_button) {
             String word = text_field.getText();
             if(word.length() > 0) {
                 text_field.deleteText(0, word.length());
                 translateArea.deleteText(0, translateArea.getText().length());
-                translateArea.setText(word);
+
+                String[] response = DictionaryManager.getSingleWord(word);
+                //System.out.println(response[0] + '\n' + response[1]);
+
+                translateArea.setText(response[1]);
             }
         }
         if(event.getSource() == deleteButton) {
