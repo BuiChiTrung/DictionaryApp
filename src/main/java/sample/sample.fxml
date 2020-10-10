@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <HBox alignment="CENTER" prefHeight="33.0" prefWidth="684.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="text_field" prefHeight="31.0" prefWidth="177.0" />
+            <Button fx:id="translate_button" mnemonicParsing="false" text="Translate">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </opaqueInsets>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="467.0" prefWidth="107.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="0.0" prefWidth="100.0" text="Your dictionary" textAlignment="CENTER" />
+            <ListView prefHeight="202.0" prefWidth="114.0" />
+            <HBox prefHeight="33.0" prefWidth="101.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Add" />
+                  <Button mnemonicParsing="false" text="Delete" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="102.0" text="History" />
+            <ListView prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <Label alignment="TOP_LEFT" disable="true" prefHeight="442.0" prefWidth="293.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
