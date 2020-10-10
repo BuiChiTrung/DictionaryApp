@@ -9,8 +9,8 @@
    <top>
       <HBox alignment="CENTER" prefHeight="33.0" prefWidth="684.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="text_field" prefHeight="31.0" prefWidth="177.0" />
-            <Button fx:id="translate_button" mnemonicParsing="false" text="Translate">
+            <TextField fx:id="text_field" prefHeight="31.0" prefWidth="476.0" />
+            <Button fx:id="translate_button" mnemonicParsing="false" onAction="#Submit" text="Translate">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -25,7 +25,7 @@
       <VBox prefHeight="467.0" prefWidth="107.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="0.0" prefWidth="100.0" text="Your dictionary" textAlignment="CENTER" />
-            <ListView prefHeight="202.0" prefWidth="114.0" />
+            <ListView fx:id="Dictionary" prefHeight="302.0" prefWidth="107.0" />
             <HBox prefHeight="33.0" prefWidth="101.0">
                <children>
                   <Button mnemonicParsing="false" text="Add" />
@@ -35,15 +35,7 @@
          </children>
       </VBox>
    </left>
-   <right>
-      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="102.0" text="History" />
-            <ListView prefHeight="200.0" prefWidth="200.0" />
-         </children>
-      </VBox>
-   </right>
    <center>
-      <Label alignment="TOP_LEFT" disable="true" prefHeight="442.0" prefWidth="293.0" BorderPane.alignment="CENTER" />
+      <TextArea fx:id="translateArea" prefHeight="200.0" prefWidth="200.0" wrapText="true" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
