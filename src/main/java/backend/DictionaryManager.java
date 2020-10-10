@@ -2,6 +2,7 @@ package backend;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 
 
 public class DictionaryManager {
@@ -65,8 +66,8 @@ public class DictionaryManager {
      * @param subEnWord prefix
      * @throws SQLException exception
      */
-    public void selectMultipleWords(String subEnWord) throws SQLException{
-        //ResultSet resultSet = st.executeQuery("SELECT * FROM words");
+    public ArrayList<String> selectMultipleWords(String subEnWord) throws SQLException{
+        ArrayList<String> response = new ArrayList<>();
 
         String firstWord = subEnWord;
         String lastWord = subEnWord + "zz";
@@ -78,10 +79,11 @@ public class DictionaryManager {
             int id = resultSet.getInt("id");
             String enWord = resultSet.getString("enWord");
             String viWord = resultSet.getString("viWord");
-            System.out.println(enWord);
-            //System.out.println(viWord);
+            response.add(enWord);
+
         }
         resultSet.close();
+        return response;
     }
 
     /**
@@ -116,7 +118,12 @@ public class DictionaryManager {
         //instance.deleteWord("aba");
         //System.out.println(instance.wordInDict("hate"));
         //instance.addNewWord(new Word("love", "tìnhyêu"));
-        //instance.selectMultipleWords("goo");
+
+        ArrayList<String> response1 = instance.selectMultipleWords("goo");
+        for (String str : response1) {
+            System.out.println(str);
+        }
+
         String[] response = instance.getSingleWord("happy");
         System.out.println(response[0] + '\n' + response[1]);
 
