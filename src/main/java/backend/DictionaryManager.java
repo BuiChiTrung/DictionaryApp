@@ -57,6 +57,7 @@ public class DictionaryManager {
         response[0] = apiResponse[0]; // audio link
         response[1] = dbResponse + apiResponse[1]; // definitions, examples,...
 
+        rs.close();
         return response;
     }
 
@@ -78,7 +79,7 @@ public class DictionaryManager {
         while (resultSet.next()) {
             int id = resultSet.getInt("id");
             String enWord = resultSet.getString("enWord");
-            String viWord = resultSet.getString("viWord");
+            //String viWord = resultSet.getString("viWord");
             response.add(enWord);
 
         }
