@@ -4,10 +4,7 @@ import org.json.*;
 //import org.json.simple.parser.JSONParser;
 //import org.json.simple.parser.ParseException;
 
-import java.io.BufferedReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.*;
 import javax.net.ssl.HttpsURLConnection;
 
@@ -55,8 +52,8 @@ public class OxfordApi {
             return stringBuilder.toString();
 
         }
-        catch (Exception e) {
-            e.printStackTrace();
+        catch (IOException e) {
+            //e.printStackTrace();
             return "API-ERROR";
         }
     }
@@ -69,14 +66,14 @@ public class OxfordApi {
      */
     public static String[] parseJsonString(String jsonString) throws IOException {
         FileWriter out_file = new FileWriter(OUT_FILE);
+        String[] oxfordResponse = {"Not Found", "Not Found"};
 
         if (jsonString.equals("API-ERROR")) {
             out_file.write("hhi");
             out_file.close();
-            return null;
+            return oxfordResponse;
         }
 
-        String[] oxfordResponse = {"Not Found", "Not Found"};
         try {
             StringBuilder definitions = new StringBuilder();
 
@@ -123,7 +120,7 @@ public class OxfordApi {
      * @throws IOException exception
      */
     public static void main(String[] args) throws IOException {
-       String[] oxfordResponse = OxfordApi.parseJsonString(OxfordApi.getOxford("word"));
+       String[] oxfordResponse = OxfordApi.parseJsonString(OxfordApi.getOxford("aaaa"));
        System.out.println(oxfordResponse[0]);
        System.out.println(oxfordResponse[1]);
     }

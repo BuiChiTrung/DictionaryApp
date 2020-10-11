@@ -41,6 +41,7 @@ public class DictionaryManager {
      */
     public static String[] getSingleWord (String enWord) throws SQLException, IOException {
         String[] response = new String[2];
+        if (!wordInDict(enWord)) return response;
 
         // get info in database
         String command = "SELECT * FROM words WHERE enWord =" + "'" + enWord + "';";
@@ -53,7 +54,7 @@ public class DictionaryManager {
 
 
         response[0] = apiResponse[0]; // audio link
-        response[1] = dbResponse + "OXFORD DICTIONARY:\n" + apiResponse[1]; // definitions, examples,...
+        response[1] = dbResponse + "\nOXFORD DICTIONARY:\n" + apiResponse[1]; // definitions, examples,...
 
         rs.close();
         return response;
@@ -107,6 +108,12 @@ public class DictionaryManager {
         st.executeUpdate(command);
     }
 
+
+    public static void modifyWord(String enWord, String viWord) throws SQLException {
+        String command = "UPDATE words SET viWord='" + viWord + "'WHERE enWord='" + enWord + "';";
+        st.executeUpdate(command);
+    }
+
     /**
      * get all favorite words of user.
      *
@@ -156,14 +163,17 @@ public class DictionaryManager {
     public static void main(String[] args) throws SQLException, IOException {
         //instance.deleteWord("aba");
         //System.out.println(DictionaryManager.wordInDict("hate"));
-        //DictionaryManager.addNewWord(new Word("love", "tìnhyêu"));
+        DictionaryManager.addNewWord(new Word("aaaa", "tìnhyêu"));
+        DictionaryManager.modifyWord("aaaa", "son tung mtp");
+        //DictionaryManager.deleteWord("aaaa");
+
 
         ArrayList<String> response1 = DictionaryManager.selectMultipleWords("goof");
         for (String str : response1) {
             System.out.println(str);
         }
 
-        String[] response = DictionaryManager.getSingleWord("happy");
+        String[] response = DictionaryManager.getSingleWord("aaaa");
         System.out.println(response[0] + '\n' + response[1]);
 
 
