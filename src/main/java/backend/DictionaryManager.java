@@ -13,8 +13,8 @@ public class DictionaryManager {
             con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/straw", "straw", "Trung123");
             //con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ad", "ad", "555666");
             st = con.createStatement();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -93,7 +93,7 @@ public class DictionaryManager {
     public static void addNewWord(Word newWord) throws SQLException {
         if (wordInDict(newWord.getEnWord())) return;
 
-        String command = "INSERT INTO words (enWord, viWord) VALUES" + "('" + newWord.getEnWord() + "','" + newWord.getViWord() + "');";
+        String command = "INSERT INTO words (enWord, viWord, inFavorite) VALUES" + "('" + newWord.getEnWord() + "','" + newWord.getViWord() + "',false);";
         st.executeUpdate(command);
     }
 
@@ -108,13 +108,54 @@ public class DictionaryManager {
     }
 
     /**
+     * get all favorite words of user.
+     *
+     * @return a list of favorite words
+     * @throws SQLException exception
+     */
+    public static ArrayList<Word> selectFavoriteWords() throws SQLException {
+        ArrayList<Word> res = new ArrayList<>();
+        String command = "SELECT * FROM words WHERE inFavorite=true;";
+        ResultSet rs = st.executeQuery(command);
+
+        while(rs.next()) {
+            String enWord = rs.getString("enWord");
+            String viWord = rs.getString("viWord");
+            res.add(new Word(enWord, viWord));
+        }
+        return res;
+    }
+
+    /**
+     * add a word to favorite list.
+     *
+     * @param enWord english word
+     * @throws SQLException exception
+     */
+    public static void addToFavorite(String enWord) throws SQLException {
+        String command = "UPDATE words SET inFavorite = true WHERE enWord='" + enWord + "';";
+        st.executeUpdate(command);
+    }
+
+    /**
+     * remove a word from favorite list.
+     *
+     * @param enWord english word
+     * @throws SQLException exception
+     */
+    public static void removeFromFavorite(String enWord) throws SQLException {
+        String command = "UPDATE words SET inFavorite = false WHERE enWord='" + enWord + "';";
+        st.executeUpdate(command);
+    }
+
+    /**
      * test methods.
      * @param args no args
      * @throws SQLException exception
      */
     public static void main(String[] args) throws SQLException, IOException {
         //instance.deleteWord("aba");
-        System.out.println(DictionaryManager.wordInDict("hate"));
+        //System.out.println(DictionaryManager.wordInDict("hate"));
         //DictionaryManager.addNewWord(new Word("love", "tìnhyêu"));
 
         ArrayList<String> response1 = DictionaryManager.selectMultipleWords("goof");
@@ -124,6 +165,17 @@ public class DictionaryManager {
 
         String[] response = DictionaryManager.getSingleWord("happy");
         System.out.println(response[0] + '\n' + response[1]);
+
+
+//        DictionaryManager.addToFavorite("aba");
+//        DictionaryManager.addToFavorite("home");
+//
+//        ArrayList<Word> response2 = DictionaryManager.selectFavoriteWords();
+//        for (Word word: response2) {
+//            System.out.println(word.toString());
+//        }
+//        DictionaryManager.removeFromFavorite("home");
+//        DictionaryManager.removeFromFavorite("aba");
 
         DictionaryManager.con.close();
         DictionaryManager.st.close();

@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class AddFileToDb {
     public static void main(String[] args) throws FileNotFoundException, SQLException {
          // Modify path
-         File inp_file = new File("/home/straw/Java/DictionaryApp/src/main/java/database.txt");
+         File inp_file = new File("src/main/java/backend/database.txt");
          Scanner sc = new Scanner(inp_file);
 
          String enWord = "";
