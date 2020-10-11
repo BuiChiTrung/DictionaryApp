@@ -133,13 +133,13 @@ public class Controller {
                 String word = addWordTextField.getText();
                 String definition = textArea.getText();
                 /*
-                Add word in personal Dict
+                add (word, definition) to TreeMap
                  */
                 personalDictionary.getItems().add(word);
             }
             else {
                 /*
-                Modify in personal Dict
+                update (word, definition) to TreeMap
                  */
             }
             setTranslateMode();
@@ -153,7 +153,7 @@ public class Controller {
             if(word.length() > 0 && definition.length() > 0 && !personalDictionary.getItems().contains(word)) {
                 personalDictionary.getItems().add(word);
                 /*
-                Add or modify word in personal Dict
+                Update (word, definition) to TreeMap
                  */
             }
         }
@@ -161,6 +161,7 @@ public class Controller {
             String word = personalDictionary.getSelectionModel().getSelectedItem();
             if(word != null) {
                 setModifyPersonalDictionaryMode();
+                //textArea.setText(enWord in treeMap)
                 textArea.setText("1231425rrqarqarr");
                 textArea.setEditable(true);
             }
