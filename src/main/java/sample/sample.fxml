@@ -7,10 +7,10 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <top>
-        <HBox alignment="CENTER" prefHeight="33.0" prefWidth="684.0" spacing="20.0" BorderPane.alignment="CENTER">
+        <HBox fx:id="translateSide" alignment="CENTER" prefHeight="51.0" prefWidth="990.0" spacing="20.0" BorderPane.alignment="CENTER">
             <children>
-                <TextField fx:id="text_field" prefHeight="31.0" prefWidth="476.0" />
-                <Button fx:id="translate_button" mnemonicParsing="false" onAction="#Submit" text="Translate">
+                <TextField fx:id="translateTextField" prefHeight="31.0" prefWidth="476.0" />
+                <Button fx:id="translateButton" mnemonicParsing="false" onAction="#Submit" text="Translate">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
@@ -21,24 +21,60 @@
             </opaqueInsets>
         </HBox>
     </top>
-    <left>
+   <right>
         <VBox alignment="TOP_CENTER" prefHeight="467.0" prefWidth="107.0" spacing="10.0" BorderPane.alignment="CENTER">
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="100.0" text="Your dictionary" textAlignment="CENTER" />
-                <ListView fx:id="Dictionary" prefHeight="302.0" prefWidth="107.0" />
+                <ListView fx:id="personalDictionary" prefHeight="302.0" prefWidth="107.0" />
                 <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                     <children>
-                        <Button fx:id="searrchButton" mnemonicParsing="false" onAction="#Submit" text="Search" />
+                        <Button fx:id="searchButton" mnemonicParsing="false" onAction="#Submit" text="Search" />
                         <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#Submit" text="Delete" />
                         <Button fx:id="modifyButton" mnemonicParsing="false" onAction="#Submit" text="Modify" />
-                        <TextField fx:id="addText" />
                         <Button fx:id="addButton" mnemonicParsing="false" onAction="#Submit" text="Add" />
                     </children>
                 </VBox>
             </children>
         </VBox>
-    </left>
-    <center>
-        <TextArea fx:id="translateArea" prefHeight="200.0" prefWidth="200.0" wrapText="true" BorderPane.alignment="CENTER" />
-    </center>
+   </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="chooseAddWord" alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="893.0" spacing="10.0">
+               <children>
+                  <Label fx:id="addWordLabel" prefHeight="31.0" prefWidth="169.0" text="Enter your added word:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="addWordTextField" />
+               </children>
+            </HBox>
+            <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" />
+            <HBox fx:id="confirmOrCancelButton" alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="739.0" spacing="10.0">
+               <children>
+                  <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#Submit" text="Confirm" />
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#Submit" text="Cancel" />
+                  <HBox alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="577.0">
+                     <children>
+                        <Button fx:id="addToPersonalDictButton" mnemonicParsing="false" onAction="#Submit" text="Add to personal Dictionary" />
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <padding>
+      <Insets right="10.0" top="10.0" />
+   </padding>
+   <left>
+      <VBox prefHeight="457.0" prefWidth="144.0" BorderPane.alignment="CENTER" />
+   </left>
 </BorderPane>

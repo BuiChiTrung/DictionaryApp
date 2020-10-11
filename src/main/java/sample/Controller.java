@@ -5,22 +5,22 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.collections.ObservableList;
-
+import javafx.scene.layout.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class Controller {
     @FXML
-    private TextField text_field;
+    private TextField translateTextField;
 
     @FXML
-    private TextArea translateArea;
+    private Button translateButton;
 
     @FXML
-    private Button translate_button;
+    private TextArea textArea;
 
     @FXML
-    private ListView Dictionary;
+    private ListView<String> personalDictionary;
 
     @FXML
     private Button deleteButton;
@@ -29,36 +29,140 @@ public class Controller {
     private Button addButton;
 
     @FXML
-    private TextField addText;
-    public void initialize() {
-        Dictionary.getItems().addAll("A", "B", "C", "D", "E", "F", "g");
-        Dictionary.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-        translateArea.setEditable(false);
-        translateArea.setWrapText(true);
+    private Button searchButton;
+
+    @FXML
+    private Button modifyButton;
+
+    @FXML
+    private TextField addWordTextField;
+
+    @FXML
+    private Label addWordLabel;
+
+    @FXML
+    private Button confirmButton;
+
+    @FXML
+    private Button cancelButton;
+
+    @FXML
+    private HBox confirmOrCancelButton;
+
+    @FXML
+    private HBox chooseAddWord;
+
+    @FXML
+    private HBox translateSide;
+
+    @FXML
+    private Button addToPersonalDictButton;
+    private String currentMode;
+    public void setTranslateMode() {
+        currentMode = "";
+        translateTextField.setText("");
+        textArea.setPromptText("");
+        textArea.setText("");
+        textArea.setEditable(false);
+        chooseAddWord.setVisible(false);
+        confirmOrCancelButton.setVisible(false);
+        translateSide.setVisible(true);
+        searchButton.setVisible(true);
+        deleteButton.setVisible(true);
+        addWordTextField.setText("");
+        addButton.setVisible(true);
+        modifyButton.setVisible(true);
+        addToPersonalDictButton.setVisible(true);
     }
-
+    public void setAddPersonalDictionaryMode() {
+        currentMode = "Add";
+        translateTextField.setText("");
+        textArea.setText("");
+        textArea.setPromptText("Enter your definition of your added word");
+        textArea.setEditable(true);
+        chooseAddWord.setVisible(true);
+        confirmOrCancelButton.setVisible(true);
+        translateTextField.setText("");
+        translateSide.setVisible(false);
+        searchButton.setVisible(false);
+        deleteButton.setVisible(false);
+        addWordTextField.setText("");
+        addButton.setVisible(false);
+        modifyButton.setVisible(false);
+        addToPersonalDictButton.setVisible(false);
+    }
+    public void setModifyPersonalDictionaryMode() {
+        currentMode = "Modify";
+        translateTextField.setText("");
+        textArea.setText("");
+        textArea.setEditable(true);
+        translateTextField.setText("");
+        translateSide.setVisible(false);
+        searchButton.setVisible(false);
+        deleteButton.setVisible(false);
+        addButton.setVisible(false);
+        modifyButton.setVisible(false);
+        addWordTextField.setText("");
+        chooseAddWord.setVisible(false);
+        addToPersonalDictButton.setVisible(false);
+        confirmOrCancelButton.setVisible(true);
+    }
+    public void initialize() {
+        personalDictionary.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        textArea.setWrapText(true);
+    }
     public void Submit(ActionEvent event) throws SQLException, IOException {
-        if(event.getSource() == translate_button) {
-            String word = text_field.getText();
+        if(event.getSource() == translateButton) {
+            String word = translateTextField.getText();
             if(word.length() > 0) {
-                text_field.deleteText(0, word.length());
-                translateArea.deleteText(0, translateArea.getText().length());
-
-                String[] response = DictionaryManager.getSingleWord(word);
+                textArea.deleteText(0, textArea.getText().length());
+                //String[] response = DictionaryManager.getSingleWord(word);
                 //System.out.println(response[0] + '\n' + response[1]);
-
-                translateArea.setText(response[1]);
+                //textArea.setText(response[1]);
             }
         }
         if(event.getSource() == deleteButton) {
-            Object selectedItem = Dictionary.getSelectionModel().getSelectedItem();
-            Dictionary.getItems().remove(selectedItem);
+            Object selectedItem = personalDictionary.getSelectionModel().getSelectedItem();
+            personalDictionary.getItems().remove(selectedItem);
         }
         if(event.getSource() == addButton) {
-            String addWord = addText.getText();
-            addText.deleteText(0, addWord.length());
-            if(addWord.length() > 0) {
-                Dictionary.getItems().add(addWord);
+            setAddPersonalDictionaryMode();
+        }
+        if(event.getSource() == confirmButton) {
+            if(currentMode == "Add") {
+                String word = addWordTextField.getText();
+                String definition = textArea.getText();
+                /*
+                Add word in personal Dict
+                 */
+                personalDictionary.getItems().add(word);
+            }
+            else {
+                /*
+                Modify in personal Dict
+                 */
+            }
+            setTranslateMode();
+        }
+        if(event.getSource() == cancelButton) {
+            setTranslateMode();
+        }
+        if(event.getSource() == addToPersonalDictButton) {
+            String word = translateTextField.getText();
+            String definition = textArea.getText();
+            if(word.length() > 0 && definition.length() > 0 && !personalDictionary.getItems().contains(word)) {
+                personalDictionary.getItems().add(word);
+                /*
+                Add or modify word in personal Dict
+                 */
+            }
+        }
+        if(event.getSource() == modifyButton) {
+            String word = personalDictionary.getSelectionModel().getSelectedItem();
+            if(word != null) {
+                setModifyPersonalDictionaryMode();
+                textArea.setText("1231425rrqarqarr");
+                textArea.setEditable(true);
             }
         }
     }

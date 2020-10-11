@@ -12,7 +12,6 @@ import javafx.scene.text.Text;
 import java.nio.file.Paths;
 
 public class Main extends Application {
-    public Word A;
     public static void main(String[] args) {
         launch(args);
     }
@@ -22,9 +21,10 @@ public class Main extends Application {
         String path= "src/main/java/sample/sample.fxml";
         Parent root = FXMLLoader.load(Paths.get(path).toUri().toURL());
         StackPane layout = new StackPane();
-        //Text text = new Text();
+        Text text = new Text();
         layout.getChildren().add(root);
         Scene scene = new Scene(layout, 1000, 500);
+        primaryStage.setTitle("Dictionary");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

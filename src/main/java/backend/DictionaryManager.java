@@ -10,8 +10,8 @@ public class DictionaryManager {
     private static Statement st;
     static {
         try {
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/straw", "straw", "Trung123");
-            //con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ad", "ad", "555666");
+            //con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/straw", "straw", "Trung123");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ad", "ad", "555666");
             st = con.createStatement();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
