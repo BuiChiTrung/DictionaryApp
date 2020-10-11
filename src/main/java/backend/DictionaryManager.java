@@ -3,15 +3,17 @@ package backend;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
-
+import java.net.*;
+import javazoom.jl.player.Player;
+import java.io.BufferedInputStream;
 
 public class DictionaryManager {
     private static Connection con;
     private static Statement st;
     static {
         try {
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/straw", "straw", "Trung123");
-            //con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ad", "ad", "555666");
+            //con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/straw", "straw", "Trung123");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ad", "ad", "555666");
             st = con.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -50,11 +52,13 @@ public class DictionaryManager {
 
         // get more info with oxford api
         String dbResponse = rs.getString("viWord");
-        String[] apiResponse = OxfordApi.parseJsonString(OxfordApi.getOxford(enWord));
+        //String[] apiResponse = OxfordApi.parseJsonString(OxfordApi.getOxford(enWord));
 
 
-        response[0] = apiResponse[0]; // audio link
-        response[1] = dbResponse + "\nOXFORD DICTIONARY:\n" + apiResponse[1]; // definitions, examples,...
+        //response[0] = apiResponse[0]; // audio link
+        //response[1] = dbResponse + "\nOXFORD DICTIONARY:\n" + apiResponse[1]; // definitions, examples,...
+        response[0] = "";
+        response[1] = dbResponse;
 
         rs.close();
         return response;
@@ -160,6 +164,18 @@ public class DictionaryManager {
      * @param args no args
      * @throws SQLException exception
      */
+    public static void playSound(String path) {
+            try {
+                URL url = new URL(path);
+                URLConnection connection = url.openConnection();
+                connection.connect();
+                BufferedInputStream reader = new BufferedInputStream(connection.getInputStream());
+                Player player = new Player(reader);
+                player.play();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+    }
     public static void main(String[] args) throws SQLException, IOException {
         //instance.deleteWord("aba");
         //System.out.println(DictionaryManager.wordInDict("hate"));
