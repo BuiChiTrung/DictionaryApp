@@ -83,6 +83,9 @@ public class Controller {
     @FXML
     private Button speakButton;
 
+    @FXML
+    private Button chooseButton;
+
     private String currentMode;
     private String currentWord;
     private String currentDefinition;
@@ -145,6 +148,7 @@ public class Controller {
     }
     public void initialize() {
         personalDictionary.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        listSuggestWord.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         textArea.setWrapText(true);
         setTranslateMode();
     }
@@ -240,6 +244,11 @@ public class Controller {
                 String[] response = DictionaryManager.getSingleWord(word);
                 DictionaryManager.playSound(response[0]);
             }
+        }
+        if(event.getSource() == chooseButton) {
+            String word = listSuggestWord.getSelectionModel().getSelectedItem();
+            translateTextField.setText(word);
+            listSuggestWord.getSelectionModel().clearSelection();
         }
     }
 }

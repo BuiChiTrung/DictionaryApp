@@ -1,5 +1,5 @@
 {
-    "id": "something",
+    "id": "bitch",
     "metadata": {
         "operation": "retrieve",
         "provider": "Oxford University Press",
@@ -7,7 +7,7 @@
     },
     "results": [
         {
-            "id": "something",
+            "id": "bitch",
             "language": "en-gb",
             "lexicalEntries": [
                 {
@@ -15,122 +15,140 @@
                         {
                             "pronunciations": [
                                 {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/something_gb_1.mp3",
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/bitch_gb_1.mp3",
                                     "dialects": [
                                         "British English"
                                     ],
                                     "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "ˈsʌmθɪŋ"
+                                    "phoneticSpelling": "bɪtʃ"
                                 }
                             ],
                             "senses": [
                                 {
                                     "definitions": [
-                                        "a thing that is unspecified or unknown"
+                                        "a female dog, wolf, fox, or otter."
                                     ],
-                                    "examples": [
-                                        {
-                                            "text": "we stopped for something to eat"
-                                        },
-                                        {
-                                            "text": "I knew something terrible had happened"
-                                        },
-                                        {
-                                            "text": "something about her frightened me"
-                                        }
-                                    ],
-                                    "id": "m_en_gbus0967830.006"
+                                    "id": "m_en_gbus0098890.008"
                                 },
                                 {
                                     "definitions": [
-                                        "used in various expressions indicating that a description or amount being stated is not exact"
+                                        "a spiteful, unpleasant, or disliked woman."
+                                    ],
+                                    "id": "m_en_gbus0098890.012",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "a woman."
+                                            ],
+                                            "id": "m_en_gbus0098890.013"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "a person who is completely subservient to another."
+                                            ],
+                                            "id": "m_en_gbus0098890.014"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "used as a form of address"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "I'm free, bitches!"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0098890.015"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "a difficult or unpleasant situation or thing"
                                     ],
                                     "examples": [
                                         {
-                                            "text": "a wry look, something between amusement and regret"
-                                        },
-                                        {
-                                            "text": "grassland totalling something over three hundred acres"
-                                        },
-                                        {
-                                            "text": "there were something like fifty applications"
+                                            "text": "working the night shift is a bitch"
                                         }
                                     ],
-                                    "id": "m_en_gbus0967830.009"
+                                    "id": "m_en_gbus0098890.017"
+                                },
+                                {
+                                    "definitions": [
+                                        "a complaint"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "my big bitch is that there's nothing new here"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0098890.019"
                                 }
                             ]
                         }
                     ],
                     "language": "en-gb",
                     "lexicalCategory": {
-                        "id": "pronoun",
-                        "text": "Pronoun"
+                        "id": "noun",
+                        "text": "Noun"
                     },
-                    "text": "something"
+                    "text": "bitch"
                 },
                 {
                     "entries": [
                         {
                             "pronunciations": [
                                 {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/something_gb_1.mp3",
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/bitch_gb_1.mp3",
                                     "dialects": [
                                         "British English"
                                     ],
                                     "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "ˈsʌmθɪŋ"
+                                    "phoneticSpelling": "bɪtʃ"
                                 }
                             ],
                             "senses": [
                                 {
                                     "definitions": [
-                                        "used for emphasis with a following adjective functioning as an adverb"
+                                        "make spitefully critical comments"
                                     ],
                                     "examples": [
                                         {
-                                            "text": "my back hurts something terrible"
-                                        },
-                                        {
-                                            "text": "he used to take the mickey out of me something awful"
+                                            "text": "everybody was bitching about their colleagues"
                                         }
                                     ],
-                                    "id": "m_en_gbus0967830.012"
-                                },
-                                {
-                                    "definitions": [
-                                        "to some extent; somewhat"
-                                    ],
-                                    "examples": [
+                                    "id": "m_en_gbus0098890.021",
+                                    "subsenses": [
                                         {
-                                            "text": "the people were something scared"
+                                            "definitions": [
+                                                "express displeasure; grumble"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "they bitch about everything"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0098890.037"
                                         }
-                                    ],
-                                    "id": "m_en_gbus0967830.015"
+                                    ]
                                 }
                             ]
                         }
                     ],
                     "language": "en-gb",
                     "lexicalCategory": {
-                        "id": "adverb",
-                        "text": "Adverb"
+                        "id": "verb",
+                        "text": "Verb"
                     },
-                    "text": "something"
+                    "text": "bitch"
                 }
             ],
             "type": "headword",
-            "word": "something"
+            "word": "bitch"
         }
     ],
-    "word": "something"
+    "word": "bitch"
 }
 
-Audio link       : https://audio.oxforddictionaries.com/en/mp3/something_gb_1.mp3
-Phonetic Spelling: ˈsʌmθɪŋ
-
-Definition: a thing that is unspecified or unknown
-Example   : we stopped for something to eat
-
-Definition: used in various expressions indicating that a description or amount being stated is not exact
-Example   : a wry look, something between amusement and regret
+Audio link       : https://audio.oxforddictionaries.com/en/mp3/bitch_gb_1.mp3
+Phonetic Spelling: bɪtʃ
 

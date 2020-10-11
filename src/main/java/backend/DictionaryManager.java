@@ -52,13 +52,13 @@ public class DictionaryManager {
 
         // get more info with oxford api
         String dbResponse = rs.getString("viWord");
-        //String[] apiResponse = OxfordApi.parseJsonString(OxfordApi.getOxford(enWord));
+        String[] apiResponse = OxfordApi.parseJsonString(OxfordApi.getOxford(enWord));
 
 
-        //response[0] = apiResponse[0]; // audio link
-        //response[1] = dbResponse + "\nOXFORD DICTIONARY:\n" + apiResponse[1]; // definitions, examples,...
-        response[0] = "";
-        response[1] = dbResponse;
+        response[0] = apiResponse[0]; // audio link
+        response[1] = dbResponse + "\nOXFORD DICTIONARY:\n" + apiResponse[1]; // definitions, examples,...
+        //response[0] = "";
+        //response[1] = dbResponse;
 
         rs.close();
         return response;

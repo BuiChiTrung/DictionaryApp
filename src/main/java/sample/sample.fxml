@@ -76,10 +76,11 @@
         <Insets right="10.0" top="10.0" />
     </padding>
     <left>
-        <VBox fx:id="leftSide" prefHeight="457.0" prefWidth="144.0" spacing="10.0" BorderPane.alignment="CENTER">
+        <VBox fx:id="leftSide" alignment="TOP_CENTER" prefHeight="457.0" prefWidth="144.0" spacing="10.0" BorderPane.alignment="CENTER">
             <children>
                 <Button fx:id="suggestButton" mnemonicParsing="false" onAction="#Submit" prefHeight="26.0" prefWidth="157.0" text="Suggest Word" />
                 <ListView fx:id="listSuggestWord" prefHeight="280.0" prefWidth="127.0" />
+            <Button fx:id="chooseButton" alignment="CENTER" mnemonicParsing="false" onAction="#Submit" text="Choose" />
             </children>
          <BorderPane.margin>
             <Insets top="10.0" />
