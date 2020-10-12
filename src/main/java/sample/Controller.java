@@ -146,11 +146,13 @@ public class Controller {
         deleteFromPersonalDictionaryButton.setVisible(false);
         speakButton.setVisible(false);
     }
-    public void initialize() {
+    public void initialize() throws SQLException {
         personalDictionary.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         listSuggestWord.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         textArea.setWrapText(true);
         setTranslateMode();
+        ArrayList<String> favoriteWord = DictionaryManager.selectFavoriteWords();
+        personalDictionary.getItems().addAll(favoriteWord);
     }
     public void Submit(ActionEvent event) throws SQLException, IOException {
         if(event.getSource() == translateButton) {
@@ -197,6 +199,7 @@ public class Controller {
                     Word newWord = new Word(word, definition);
                     personalDictionary.getItems().add(word);
                     DictionaryManager.addToFavorite(word);
+                    DictionaryManager.addNewWord(newWord);
                 }
             }
             if(currentMode.equals("Modify")) {

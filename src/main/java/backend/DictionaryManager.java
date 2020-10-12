@@ -124,15 +124,15 @@ public class DictionaryManager {
      * @return a list of favorite words
      * @throws SQLException exception
      */
-    public static ArrayList<Word> selectFavoriteWords() throws SQLException {
-        ArrayList<Word> res = new ArrayList<>();
+    public static ArrayList<String> selectFavoriteWords() throws SQLException {
+        ArrayList<String> res = new ArrayList<>();
         String command = "SELECT * FROM words WHERE inFavorite=true;";
         ResultSet rs = st.executeQuery(command);
 
         while(rs.next()) {
             String enWord = rs.getString("enWord");
             String viWord = rs.getString("viWord");
-            res.add(new Word(enWord, viWord));
+            res.add(enWord);
         }
         return res;
     }
