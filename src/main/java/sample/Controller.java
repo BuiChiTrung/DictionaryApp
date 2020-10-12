@@ -2,10 +2,13 @@ package sample;
 import backend.DictionaryManager;
 import backend.Word;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.collections.ObservableList;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
 
 import javafx.scene.media.Media;
@@ -14,13 +17,13 @@ import javafx.scene.media.MediaView;
 
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.awt.event.InputEvent;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
-
+import javafx.event.EventHandler;
+import javafx.scene.input.KeyEvent;
 import java.io.File;
-public class Controller {
+public class Controller{
     @FXML
     private TextField translateTextField;
 
@@ -86,12 +89,18 @@ public class Controller {
     @FXML
     private Button chooseButton;
 
+    @FXML
+    private BorderPane window;
+
+    @FXML
+    private TextArea instruction;
+
     private String currentMode;
     private String currentWord;
     private String currentDefinition;
     public void setTranslateMode() {
         leftSide.setVisible(true);
-        currentMode = "";
+        currentMode = "Translate";
         translateTextField.setText("");
         textArea.setPromptText("");
         textArea.setText("");
@@ -107,6 +116,7 @@ public class Controller {
         addToPersonalDictButton.setVisible(true);
         deleteFromPersonalDictionaryButton.setVisible(true);
         speakButton.setVisible(true);
+        instruction.setVisible(true);
     }
     public void setAddPersonalDictionaryMode() {
         leftSide.setVisible(false);
@@ -127,6 +137,7 @@ public class Controller {
         addToPersonalDictButton.setVisible(false);
         deleteFromPersonalDictionaryButton.setVisible(false);
         speakButton.setVisible(false);
+        instruction.setVisible(false);
     }
     public void setModifyPersonalDictionaryMode() {
         leftSide.setVisible(true);
@@ -145,6 +156,7 @@ public class Controller {
         addToPersonalDictButton.setVisible(false);
         deleteFromPersonalDictionaryButton.setVisible(false);
         speakButton.setVisible(false);
+        instruction.setVisible(false);
     }
     public void initialize() throws SQLException {
         personalDictionary.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
@@ -153,6 +165,11 @@ public class Controller {
         setTranslateMode();
         ArrayList<String> favoriteWord = DictionaryManager.selectFavoriteWords();
         personalDictionary.getItems().addAll(favoriteWord);
+        instruction.setEditable(false);
+        instruction.setWrapText(true);
+        instruction.setMouseTransparent(true);
+        window.setStyle("-fx-background-color: gray");
+        currentMode = "Translate";
     }
     public void Submit(ActionEvent event) throws SQLException, IOException {
         if(event.getSource() == translateButton) {
@@ -252,6 +269,42 @@ public class Controller {
             String word = listSuggestWord.getSelectionModel().getSelectedItem();
             translateTextField.setText(word);
             listSuggestWord.getSelectionModel().clearSelection();
+        }
+    }
+    @FXML
+    private void handleOnKeyPressed(KeyEvent event) throws SQLException, IOException {
+        if(currentMode.equals("Translate")) {
+            String word = translateTextField.getText();
+            switch (event.getCode()) {
+                case SHIFT:
+                    word = word.toLowerCase();
+                    System.out.println(word);
+                    translateTextField.setText(word);
+                    ArrayList<String> suggestWords = DictionaryManager.selectMultipleWords(word);
+                    listSuggestWord.getItems().clear();
+                    for(int i = 0; i < Math.min(suggestWords.size(), 20); i++) {
+                        listSuggestWord.getItems().add(suggestWords.get(i));
+                    }
+                    break;
+                case ENTER:
+                    word = word.toLowerCase();
+                    translateTextField.setText(word);
+                    if(word.length() > 0) {
+                        textArea.deleteText(0, textArea.getText().length());
+                        String[] response = DictionaryManager.getSingleWord(word);
+                        textArea.setText(response[1]);
+                        currentWord = word;
+                        currentDefinition = response[1];
+                    }
+                    break;
+                case CONTROL:
+                    word = word.toLowerCase();
+                    translateTextField.setText(word);
+                    if(word.length() > 0 && DictionaryManager.wordInDict(word)) {
+                        String[] response = DictionaryManager.getSingleWord(word);
+                        DictionaryManager.playSound(response[0]);
+                    }
+            }
         }
     }
 }

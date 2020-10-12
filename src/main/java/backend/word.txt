@@ -1,5 +1,5 @@
 {
-    "id": "bitch",
+    "id": "consanguineous",
     "metadata": {
         "operation": "retrieve",
         "provider": "Oxford University Press",
@@ -7,7 +7,7 @@
     },
     "results": [
         {
-            "id": "bitch",
+            "id": "consanguineous",
             "language": "en-gb",
             "lexicalEntries": [
                 {
@@ -15,140 +15,47 @@
                         {
                             "pronunciations": [
                                 {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/bitch_gb_1.mp3",
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/xconsanguineous_gb_1_8.mp3",
                                     "dialects": [
                                         "British English"
                                     ],
                                     "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "bɪtʃ"
+                                    "phoneticSpelling": "ˌkɒnsaŋˈɡwɪnɪəs"
                                 }
                             ],
                             "senses": [
                                 {
                                     "definitions": [
-                                        "a female dog, wolf, fox, or otter."
-                                    ],
-                                    "id": "m_en_gbus0098890.008"
-                                },
-                                {
-                                    "definitions": [
-                                        "a spiteful, unpleasant, or disliked woman."
-                                    ],
-                                    "id": "m_en_gbus0098890.012",
-                                    "subsenses": [
-                                        {
-                                            "definitions": [
-                                                "a woman."
-                                            ],
-                                            "id": "m_en_gbus0098890.013"
-                                        },
-                                        {
-                                            "definitions": [
-                                                "a person who is completely subservient to another."
-                                            ],
-                                            "id": "m_en_gbus0098890.014"
-                                        },
-                                        {
-                                            "definitions": [
-                                                "used as a form of address"
-                                            ],
-                                            "examples": [
-                                                {
-                                                    "text": "I'm free, bitches!"
-                                                }
-                                            ],
-                                            "id": "m_en_gbus0098890.015"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "definitions": [
-                                        "a difficult or unpleasant situation or thing"
+                                        "relating to or denoting people descended from the same ancestor"
                                     ],
                                     "examples": [
                                         {
-                                            "text": "working the night shift is a bitch"
+                                            "text": "consanguineous marriages may give rise to recessive syndromes"
                                         }
                                     ],
-                                    "id": "m_en_gbus0098890.017"
-                                },
-                                {
-                                    "definitions": [
-                                        "a complaint"
-                                    ],
-                                    "examples": [
-                                        {
-                                            "text": "my big bitch is that there's nothing new here"
-                                        }
-                                    ],
-                                    "id": "m_en_gbus0098890.019"
+                                    "id": "m_en_gbus0212050.005"
                                 }
                             ]
                         }
                     ],
                     "language": "en-gb",
                     "lexicalCategory": {
-                        "id": "noun",
-                        "text": "Noun"
+                        "id": "adjective",
+                        "text": "Adjective"
                     },
-                    "text": "bitch"
-                },
-                {
-                    "entries": [
-                        {
-                            "pronunciations": [
-                                {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/bitch_gb_1.mp3",
-                                    "dialects": [
-                                        "British English"
-                                    ],
-                                    "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "bɪtʃ"
-                                }
-                            ],
-                            "senses": [
-                                {
-                                    "definitions": [
-                                        "make spitefully critical comments"
-                                    ],
-                                    "examples": [
-                                        {
-                                            "text": "everybody was bitching about their colleagues"
-                                        }
-                                    ],
-                                    "id": "m_en_gbus0098890.021",
-                                    "subsenses": [
-                                        {
-                                            "definitions": [
-                                                "express displeasure; grumble"
-                                            ],
-                                            "examples": [
-                                                {
-                                                    "text": "they bitch about everything"
-                                                }
-                                            ],
-                                            "id": "m_en_gbus0098890.037"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "language": "en-gb",
-                    "lexicalCategory": {
-                        "id": "verb",
-                        "text": "Verb"
-                    },
-                    "text": "bitch"
+                    "text": "consanguineous"
                 }
             ],
             "type": "headword",
-            "word": "bitch"
+            "word": "consanguineous"
         }
     ],
-    "word": "bitch"
+    "word": "consanguineous"
 }
 
-Audio link       : https://audio.oxforddictionaries.com/en/mp3/bitch_gb_1.mp3
-Phonetic Spelling: bɪtʃ
+Audio link       : https://audio.oxforddictionaries.com/en/mp3/xconsanguineous_gb_1_8.mp3
+Phonetic Spelling: ˌkɒnsaŋˈɡwɪnɪəs
+
+Definition: relating to or denoting people descended from the same ancestor
+Example   : consanguineous marriages may give rise to recessive syndromes
 
