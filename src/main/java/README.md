@@ -7,8 +7,7 @@ db
 5. OxfordApi: lấy api của Oxford (phát âm, file mp3, định nghĩa, ví dụ)
 6. createtable.sql: tạo table trong database (postgresql)
 7. database.txt: file từ vựng 
-8. data.txt : file nhỏ trong database.txt để test code 
-9. word.txt : data lấy từ OxfordApi 
-10. straw_localhost-2020_10_09_18_55_05-dump.sql: database sau khi đc export
+8. word.txt : data lấy từ OxfordApi 
+9. straw_localhost-2020_10_11_15_31_56-dump: database sau khi đc export
 
 ### package: sample - Giao diện 

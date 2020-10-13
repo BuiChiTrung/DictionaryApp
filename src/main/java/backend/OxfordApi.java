@@ -107,7 +107,7 @@ public class OxfordApi {
             oxfordResponse[1] = definitions.toString();
         }
         catch(JSONException e) {
-            System.out.println("Wrong");
+            System.out.println("Can't parse json");
         }
         out_file.close();
         return oxfordResponse;
@@ -120,7 +120,7 @@ public class OxfordApi {
      * @throws IOException exception
      */
     public static void main(String[] args) throws IOException {
-       String[] oxfordResponse = OxfordApi.parseJsonString(OxfordApi.getOxford("aaaa"));
+       String[] oxfordResponse = OxfordApi.parseJsonString(OxfordApi.getOxford("okun`s"));
        System.out.println(oxfordResponse[0]);
        System.out.println(oxfordResponse[1]);
     }

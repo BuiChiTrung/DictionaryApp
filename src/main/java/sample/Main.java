@@ -22,9 +22,11 @@ public class Main extends Application {
         String path= "src/main/java/sample/sample.fxml";
         Parent root = FXMLLoader.load(Paths.get(path).toUri().toURL());
         StackPane layout = new StackPane();
-        //Text text = new Text();
         layout.getChildren().add(root);
-        Scene scene = new Scene(layout, 1000, 500);
+
+        Scene scene = new Scene(layout, 1200, 600);
+        scene.getStylesheets().add("style.css");
+
         primaryStage.setScene(scene);
         primaryStage.show();
     }

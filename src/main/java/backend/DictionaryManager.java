@@ -3,7 +3,10 @@ package backend;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
-
+import java.net.*;
+import javazoom.jl.player.Player;
+import java.io.BufferedInputStream;
+import java.util.Collections;
 
 public class DictionaryManager {
     private static Connection con;
@@ -40,7 +43,7 @@ public class DictionaryManager {
      * @throws IOException exception
      */
     public static String[] getSingleWord (String enWord) throws SQLException, IOException {
-        String[] response = new String[2];
+        String[] response = {"", ""};
         if (!wordInDict(enWord)) return response;
 
         // get info in database
@@ -120,16 +123,16 @@ public class DictionaryManager {
      * @return a list of favorite words
      * @throws SQLException exception
      */
-    public static ArrayList<Word> selectFavoriteWords() throws SQLException {
-        ArrayList<Word> res = new ArrayList<>();
+    public static ArrayList<String> selectFavoriteWords() throws SQLException {
+        ArrayList<String> res = new ArrayList<>();
         String command = "SELECT * FROM words WHERE inFavorite=true;";
         ResultSet rs = st.executeQuery(command);
 
         while(rs.next()) {
             String enWord = rs.getString("enWord");
-            String viWord = rs.getString("viWord");
-            res.add(new Word(enWord, viWord));
+            res.add(enWord);
         }
+        Collections.sort(res);
         return res;
     }
 
@@ -155,26 +158,42 @@ public class DictionaryManager {
         st.executeUpdate(command);
     }
 
+
+    public static void playSound(String path) {
+        try {
+            URL url = new URL(path);
+            URLConnection connection = url.openConnection();
+            connection.connect();
+            BufferedInputStream reader = new BufferedInputStream(connection.getInputStream());
+            Player player = new Player(reader);
+            player.play();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      * test methods.
      * @param args no args
      * @throws SQLException exception
      */
     public static void main(String[] args) throws SQLException, IOException {
-        //instance.deleteWord("aba");
-        //System.out.println(DictionaryManager.wordInDict("hate"));
-        DictionaryManager.addNewWord(new Word("aaaa", "tìnhyêu"));
-        DictionaryManager.modifyWord("aaaa", "son tung mtp");
-        //DictionaryManager.deleteWord("aaaa");
+
+//        DictionaryManager.addNewWord(new Word("aaaa", "tìnhyêu"));
+//        DictionaryManager.modifyWord("aaaa", "son tung mtp");
+//        DictionaryManager.deleteWord("aaaa");
 
 
-        ArrayList<String> response1 = DictionaryManager.selectMultipleWords("goof");
-        for (String str : response1) {
-            System.out.println(str);
-        }
+//        ArrayList<String> response1 = DictionaryManager.selectMultipleWords("goof");
+//        for (String str : response1) {
+//            System.out.println(str);
+//        }
 
-        String[] response = DictionaryManager.getSingleWord("aaaa");
+        String[] response = DictionaryManager.getSingleWord("zzzzzz");
         System.out.println(response[0] + '\n' + response[1]);
+
+        String[] response4 = DictionaryManager.getSingleWord("cat");
+        System.out.println(response4[0] + '\n' + response4[1]);
 
 
 //        DictionaryManager.addToFavorite("aba");
