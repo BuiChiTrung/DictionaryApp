@@ -161,7 +161,6 @@ public class Controller{
         instruction.setEditable(false);
         instruction.setWrapText(true);
         instruction.setMouseTransparent(true);
-        window.setStyle("-fx-background-color: gray");
         currentMode = "Translate";
         translateTextField.textProperty().addListener(new ChangeListener<Object>() {
             @Override
