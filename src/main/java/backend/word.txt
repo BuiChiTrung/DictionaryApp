@@ -1,5 +1,5 @@
 {
-    "id": "cat",
+    "id": "some",
     "metadata": {
         "operation": "retrieve",
         "provider": "Oxford University Press",
@@ -7,250 +7,261 @@
     },
     "results": [
         {
-            "id": "cat",
+            "id": "some",
             "language": "en-gb",
             "lexicalEntries": [
                 {
                     "entries": [
                         {
-                            "homographNumber": "100",
                             "pronunciations": [
                                 {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/cat_gb_1.mp3",
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/some_gb_2.mp3",
                                     "dialects": [
                                         "British English"
                                     ],
                                     "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "kat"
+                                    "phoneticSpelling": "sʌm"
+                                },
+                                {
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/some_gb_1.mp3",
+                                    "dialects": [
+                                        "British English"
+                                    ],
+                                    "phoneticNotation": "IPA",
+                                    "phoneticSpelling": "s(ə)m"
                                 }
                             ],
                             "senses": [
                                 {
                                     "definitions": [
-                                        "a small domesticated carnivorous mammal with soft fur, a short snout, and retractable claws. It is widely kept as a pet or for catching mice, and many breeds have been developed."
-                                    ],
-                                    "id": "m_en_gbus0158200.008",
-                                    "subsenses": [
-                                        {
-                                            "definitions": [
-                                                "a wild animal of the cat family"
-                                            ],
-                                            "examples": [
-                                                {
-                                                    "text": "a marbled cat"
-                                                }
-                                            ],
-                                            "id": "m_en_gbus0158200.015"
-                                        },
-                                        {
-                                            "definitions": [
-                                                "used in names of catlike animals of other families, e.g. native cat, ring-tailed cat."
-                                            ],
-                                            "id": "m_en_gbus0158200.016"
-                                        },
-                                        {
-                                            "definitions": [
-                                                "a malicious or spiteful woman"
-                                            ],
-                                            "examples": [
-                                                {
-                                                    "text": "his mother called me an old cat"
-                                                }
-                                            ],
-                                            "id": "m_en_gbus0158200.020"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "definitions": [
-                                        "(especially among jazz enthusiasts) a man"
+                                        "an unspecified amount or number of"
                                     ],
                                     "examples": [
                                         {
-                                            "text": "this West Coast cat had managed him since the early 80s"
+                                            "text": "I made some money running errands"
                                         },
                                         {
-                                            "text": "the cat went crazy on the horn"
+                                            "text": "he played some records for me"
                                         }
                                     ],
-                                    "id": "m_en_gbus0158200.026"
+                                    "id": "m_en_gbus0967710.007"
                                 },
                                 {
                                     "definitions": [
-                                        "a short tapered stick used in the game of tipcat."
+                                        "used to refer to someone or something that is unknown or unspecified"
                                     ],
-                                    "id": "m_en_gbus0158200.028"
+                                    "examples": [
+                                        {
+                                            "text": "I was talking to some journalist the other day"
+                                        },
+                                        {
+                                            "text": "there must be some mistake"
+                                        },
+                                        {
+                                            "text": "he's in some kind of trouble"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0967710.011"
+                                },
+                                {
+                                    "definitions": [
+                                        "(used with a number) approximately"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "some thirty different languages are spoken"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0967710.013"
+                                },
+                                {
+                                    "definitions": [
+                                        "(pronounced stressing ‘some’) a considerable amount or number of"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "he went to some trouble"
+                                        },
+                                        {
+                                            "text": "I've known you for some years now"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0967710.015"
+                                },
+                                {
+                                    "definitions": [
+                                        "(pronounced stressing ‘some’) at least a small amount or number of"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "he liked some music but generally wasn't musical"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0967710.017"
+                                },
+                                {
+                                    "definitions": [
+                                        "(pronounced stressing ‘some’) expressing admiration of something notable"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "that was some goal"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0967710.019",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "used ironically to express disapproval or disbelief"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "Mr Power gave his stock reply. Some help!"
+                                                },
+                                                {
+                                                    "text": "not that Jennifer would ever be on the dole. Some chance of that"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0967710.020"
+                                        }
+                                    ]
                                 }
                             ]
                         }
                     ],
                     "language": "en-gb",
                     "lexicalCategory": {
-                        "id": "noun",
-                        "text": "Noun"
+                        "id": "determiner",
+                        "text": "Determiner"
                     },
-                    "text": "cat"
+                    "text": "some"
                 },
                 {
                     "entries": [
                         {
-                            "homographNumber": "101",
                             "pronunciations": [
                                 {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/cat_gb_1.mp3",
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/some_gb_2.mp3",
                                     "dialects": [
                                         "British English"
                                     ],
                                     "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "kat"
+                                    "phoneticSpelling": "sʌm"
+                                },
+                                {
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/some_gb_1.mp3",
+                                    "dialects": [
+                                        "British English"
+                                    ],
+                                    "phoneticNotation": "IPA",
+                                    "phoneticSpelling": "s(ə)m"
                                 }
                             ],
                             "senses": [
                                 {
                                     "definitions": [
-                                        "raise (an anchor) from the surface of the water to the cathead"
+                                        "an unspecified number or amount of people or things"
                                     ],
                                     "examples": [
                                         {
-                                            "text": "I kept her off the wind and sailing free until I had the anchor catted"
-                                        }
-                                    ],
-                                    "id": "m_en_gbus0158200.032"
-                                }
-                            ]
-                        }
-                    ],
-                    "language": "en-gb",
-                    "lexicalCategory": {
-                        "id": "verb",
-                        "text": "Verb"
-                    },
-                    "text": "cat"
-                }
-            ],
-            "type": "headword",
-            "word": "cat"
-        },
-        {
-            "id": "cat",
-            "language": "en-gb",
-            "lexicalEntries": [
-                {
-                    "entries": [
-                        {
-                            "homographNumber": "200",
-                            "pronunciations": [
-                                {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/cat_gb_1.mp3",
-                                    "dialects": [
-                                        "British English"
-                                    ],
-                                    "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "kat"
-                                }
-                            ],
-                            "senses": [
-                                {
-                                    "examples": [
+                                            "text": "here are some of our suggestions"
+                                        },
                                         {
-                                            "text": "models fitted with a cat as standard"
+                                            "text": "if you want whisky I'll give you some"
                                         }
                                     ],
-                                    "id": "m_en_gbus0158210.005"
-                                }
-                            ]
-                        }
-                    ],
-                    "language": "en-gb",
-                    "lexicalCategory": {
-                        "id": "noun",
-                        "text": "Noun"
-                    },
-                    "text": "cat"
-                }
-            ],
-            "type": "headword",
-            "word": "cat"
-        },
-        {
-            "id": "cat",
-            "language": "en-gb",
-            "lexicalEntries": [
-                {
-                    "entries": [
-                        {
-                            "homographNumber": "300",
-                            "pronunciations": [
-                                {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/cat_gb_1.mp3",
-                                    "dialects": [
-                                        "British English"
-                                    ],
-                                    "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "kat"
-                                }
-                            ]
-                        }
-                    ],
-                    "language": "en-gb",
-                    "lexicalCategory": {
-                        "id": "noun",
-                        "text": "Noun"
-                    },
-                    "text": "cat"
-                }
-            ],
-            "type": "headword",
-            "word": "cat"
-        },
-        {
-            "id": "CAT",
-            "language": "en-gb",
-            "lexicalEntries": [
-                {
-                    "entries": [
-                        {
-                            "pronunciations": [
-                                {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/cat_gb_1.mp3",
-                                    "dialects": [
-                                        "British English"
-                                    ],
-                                    "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "kat"
-                                }
-                            ],
-                            "senses": [
-                                {
-                                    "definitions": [
-                                        "computer-assisted (or -aided) testing."
-                                    ],
-                                    "id": "m_en_gbus0158190.009"
+                                    "id": "m_en_gbus0967710.023"
                                 },
                                 {
                                     "definitions": [
-                                        "clear air turbulence."
+                                        "(pronounced stressing ‘some’) at least a small amount or number of people or things"
                                     ],
-                                    "id": "m_en_gbus0158190.006"
+                                    "examples": [
+                                        {
+                                            "text": "surely some have noticed"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0967710.027"
                                 }
                             ]
                         }
                     ],
                     "language": "en-gb",
                     "lexicalCategory": {
-                        "id": "residual",
-                        "text": "Residual"
+                        "id": "pronoun",
+                        "text": "Pronoun"
                     },
-                    "text": "CAT"
+                    "text": "some"
+                },
+                {
+                    "entries": [
+                        {
+                            "pronunciations": [
+                                {
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/some_gb_2.mp3",
+                                    "dialects": [
+                                        "British English"
+                                    ],
+                                    "phoneticNotation": "IPA",
+                                    "phoneticSpelling": "sʌm"
+                                },
+                                {
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/some_gb_1.mp3",
+                                    "dialects": [
+                                        "British English"
+                                    ],
+                                    "phoneticNotation": "IPA",
+                                    "phoneticSpelling": "s(ə)m"
+                                }
+                            ],
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "to some extent; quite a lot"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "he needs feeding up some"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0967710.029"
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-gb",
+                    "lexicalCategory": {
+                        "id": "adverb",
+                        "text": "Adverb"
+                    },
+                    "text": "some"
                 }
             ],
             "type": "headword",
-            "word": "CAT"
+            "word": "some"
         }
     ],
-    "word": "cat"
+    "word": "some"
 }
 
-Audio link       : https://audio.oxforddictionaries.com/en/mp3/cat_gb_1.mp3
-Phonetic Spelling: kat
+Audio link       : https://audio.oxforddictionaries.com/en/mp3/some_gb_2.mp3
+Phonetic Spelling: sʌm
+
+Definition: an unspecified amount or number of
+Example   : I made some money running errands
+
+Definition: used to refer to someone or something that is unknown or unspecified
+Example   : I was talking to some journalist the other day
+
+Definition: (used with a number) approximately
+Example   : some thirty different languages are spoken
+
+Definition: (pronounced stressing ‘some’) a considerable amount or number of
+Example   : he went to some trouble
+
+Definition: (pronounced stressing ‘some’) at least a small amount or number of
+Example   : he liked some music but generally wasn't musical
+
+Definition: (pronounced stressing ‘some’) expressing admiration of something notable
+Example   : that was some goal
 

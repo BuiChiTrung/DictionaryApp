@@ -120,7 +120,7 @@ public class OxfordApi {
      * @throws IOException exception
      */
     public static void main(String[] args) throws IOException {
-       String[] oxfordResponse = OxfordApi.parseJsonString(OxfordApi.getOxford("okun`s"));
+       String[] oxfordResponse = OxfordApi.parseJsonString(OxfordApi.getOxford("some"));
        System.out.println(oxfordResponse[0]);
        System.out.println(oxfordResponse[1]);
     }
