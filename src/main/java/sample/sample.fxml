@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane fx:id="window" stylesheets="@style.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyPressed" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<BorderPane fx:id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyPressed" prefHeight="600.0" prefWidth="1200.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <top>
         <HBox fx:id="translateSide" alignment="CENTER" prefHeight="51.0" prefWidth="990.0" spacing="20.0" BorderPane.alignment="CENTER">
             <children>
@@ -64,7 +63,7 @@
                 </HBox>
                 <VBox alignment="BOTTOM_CENTER" prefHeight="184.0" prefWidth="919.0">
                     <children>
-                        <TextArea fx:id="instruction" prefHeight="96.0" prefWidth="914.0" text="Instruction&#10;*Press Enter to translate&#10;*Press Shift to get suggusted word&#10;*Press Ctrl to hear that word" />
+                        <TextArea fx:id="instruction" prefHeight="96.0" prefWidth="914.0" text="Instruction&#10;*Press Enter to translate&#10;*Press Ctrl to hear that word" />
                     </children>
                 </VBox>
             </children>

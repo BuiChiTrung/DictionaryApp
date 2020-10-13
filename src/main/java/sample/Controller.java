@@ -1,6 +1,7 @@
 package sample;
 import backend.DictionaryManager;
 import backend.Word;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -23,6 +24,7 @@ import java.util.ArrayList;
 import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
 import java.io.File;
+import javafx.beans.value.ChangeListener;
 public class Controller{
     @FXML
     private TextField translateTextField;
@@ -161,6 +163,23 @@ public class Controller{
         instruction.setMouseTransparent(true);
         window.setStyle("-fx-background-color: gray");
         currentMode = "Translate";
+        translateTextField.textProperty().addListener(new ChangeListener<Object>() {
+            @Override
+            public void changed(ObservableValue observable, Object oldValue, Object newValue) {
+                String word = translateTextField.getText();
+                translateTextField.setText(word);
+                ArrayList<String> suggestWords = null;
+                try {
+                    suggestWords = DictionaryManager.selectMultipleWords(word);
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+                listSuggestWord.getItems().clear();
+                for(int i = 0; i < Math.min(suggestWords.size(), 20); i++) {
+                    listSuggestWord.getItems().add(suggestWords.get(i));
+                }
+            }
+        });
     }
     public void Submit(ActionEvent event) throws SQLException, IOException {
         if(event.getSource() == translateButton) {
@@ -251,14 +270,6 @@ public class Controller{
         if(currentMode.equals("Translate")) {
             String word = translateTextField.getText();
             switch (event.getCode()) {
-                case SHIFT:
-                    translateTextField.setText(word);
-                    ArrayList<String> suggestWords = DictionaryManager.selectMultipleWords(word);
-                    listSuggestWord.getItems().clear();
-                    for(int i = 0; i < Math.min(suggestWords.size(), 20); i++) {
-                        listSuggestWord.getItems().add(suggestWords.get(i));
-                    }
-                    break;
                 case ENTER:
                     translateTextField.setText(word);
                     if(word.length() > 0) {
