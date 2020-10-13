@@ -13,8 +13,8 @@ public class DictionaryManager {
     private static Statement st;
     static {
         try {
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/straw", "straw", "Trung123");
-            //con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ad", "ad", "555666");
+            //con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/straw", "straw", "Trung123");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ad", "ad", "555666");
             st = con.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -44,16 +44,21 @@ public class DictionaryManager {
      */
     public static String[] getSingleWord (String enWord) throws SQLException, IOException {
         String[] response = {"", ""};
-        if (!wordInDict(enWord)) return response;
-
+        String word = enWord.toString();
+        if (!wordInDict(word)) {
+            word = word.toLowerCase();
+            if(!wordInDict(word)) {
+                return response;
+            }
+        }
         // get info in database
-        String command = "SELECT * FROM words WHERE enWord =" + "'" + enWord + "';";
+        String command = "SELECT * FROM words WHERE enWord =" + "'" + word + "';";
         ResultSet rs = st.executeQuery(command);
         rs.next();
 
         // get more info with oxford api
         String dbResponse = rs.getString("viWord");
-        String[] apiResponse = OxfordApi.parseJsonString(OxfordApi.getOxford(enWord));
+        String[] apiResponse = OxfordApi.parseJsonString(OxfordApi.getOxford(word));
 
 
         response[0] = apiResponse[0]; // audio link

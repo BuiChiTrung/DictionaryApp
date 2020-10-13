@@ -165,13 +165,10 @@ public class Controller{
     public void Submit(ActionEvent event) throws SQLException, IOException {
         if(event.getSource() == translateButton) {
             String word = translateTextField.getText();
-            word = word.toLowerCase();
             translateTextField.setText(word);
             if(word.length() > 0) {
                 textArea.deleteText(0, textArea.getText().length());
-                System.out.println("what the hell");
                 String[] response = DictionaryManager.getSingleWord(word);
-                System.out.println(response[0] + response[1]);
                 textArea.setText(response[1]);
                 currentWord = word;
                 currentDefinition = response[1];
@@ -237,7 +234,6 @@ public class Controller{
 
         if(event.getSource() == speakButton) {
             String word = translateTextField.getText();
-            word = word.toLowerCase();
             translateTextField.setText(word);
             if(word.length() > 0 && DictionaryManager.wordInDict(word)) {
                 String[] response = DictionaryManager.getSingleWord(word);
@@ -256,8 +252,6 @@ public class Controller{
             String word = translateTextField.getText();
             switch (event.getCode()) {
                 case SHIFT:
-                    word = word.toLowerCase();
-                    System.out.println(word);
                     translateTextField.setText(word);
                     ArrayList<String> suggestWords = DictionaryManager.selectMultipleWords(word);
                     listSuggestWord.getItems().clear();
@@ -266,7 +260,6 @@ public class Controller{
                     }
                     break;
                 case ENTER:
-                    word = word.toLowerCase();
                     translateTextField.setText(word);
                     if(word.length() > 0) {
                         textArea.deleteText(0, textArea.getText().length());
@@ -277,7 +270,6 @@ public class Controller{
                     }
                     break;
                 case CONTROL:
-                    word = word.toLowerCase();
                     translateTextField.setText(word);
                     if(word.length() > 0 && DictionaryManager.wordInDict(word)) {
                         String[] response = DictionaryManager.getSingleWord(word);
