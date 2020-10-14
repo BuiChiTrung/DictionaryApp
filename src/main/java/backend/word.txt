@@ -1,5 +1,5 @@
 {
-    "id": "muck",
+    "id": "black",
     "metadata": {
         "operation": "retrieve",
         "provider": "Oxford University Press",
@@ -7,7 +7,7 @@
     },
     "results": [
         {
-            "id": "muck",
+            "id": "black",
             "language": "en-gb",
             "lexicalEntries": [
                 {
@@ -15,49 +15,305 @@
                         {
                             "pronunciations": [
                                 {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/muck_gb_1.mp3",
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/black_gb_1.mp3",
                                     "dialects": [
                                         "British English"
                                     ],
                                     "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "mʌk"
+                                    "phoneticSpelling": "blak"
                                 }
                             ],
                             "senses": [
                                 {
                                     "definitions": [
-                                        "dirt, rubbish, or waste matter"
+                                        "of the very darkest colour owing to the absence of or complete absorption of light; the opposite of white"
                                     ],
                                     "examples": [
                                         {
-                                            "text": "I'll just clean the muck off the windscreen"
+                                            "text": "black smoke"
+                                        },
+                                        {
+                                            "text": "her long black hair"
                                         }
                                     ],
-                                    "id": "m_en_gbus0666820.005",
+                                    "id": "m_en_gbus0099760.006",
                                     "subsenses": [
                                         {
                                             "definitions": [
-                                                "farmyard manure, widely used as fertilizer"
+                                                "(of the sky or night) completely dark owing to the sun, moon, or stars not being visible"
                                             ],
                                             "examples": [
                                                 {
-                                                    "text": "he was covered in cow muck and mud"
+                                                    "text": "the sky was moonless and black"
                                                 }
                                             ],
-                                            "id": "m_en_gbus0666820.007"
+                                            "id": "m_en_gbus0099760.010"
                                         },
                                         {
                                             "definitions": [
-                                                "something regarded as distasteful, unpleasant, or of poor quality"
+                                                "deeply stained with dirt"
                                             ],
                                             "examples": [
                                                 {
-                                                    "text": "why do you let her read this muck?"
+                                                    "text": "the walls were black with age and dirt"
                                                 }
                                             ],
-                                            "id": "m_en_gbus0666820.008"
+                                            "id": "m_en_gbus0099760.011"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "(of a plant or animal) dark in colour as distinguished from a lighter variety"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "Japanese black pine"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0099760.012"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "(of coffee or tea) served without milk"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "a mug of black coffee"
+                                                },
+                                                {
+                                                    "text": "Doyle took his coffee black"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0099760.014"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "of or denoting the suits spades and clubs in a pack of cards."
+                                            ],
+                                            "id": "m_en_gbus0099760.015"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "(of a ski run) of the highest level of difficulty, as indicated by black markers positioned along it."
+                                            ],
+                                            "id": "m_en_gbus0099760.016"
                                         }
                                     ]
+                                },
+                                {
+                                    "definitions": [
+                                        "belonging to or denoting any human group having dark-coloured skin, especially of African or Australian Aboriginal ancestry"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "black adolescents of Jamaican descent"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0099760.018",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "relating to black people"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "black culture"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0099760.020"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "characterized by tragic or disastrous events; causing despair or pessimism"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "five thousand men were killed on the blackest day of the war"
+                                        },
+                                        {
+                                            "text": "the future looks black"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0099760.022",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "(of a person's state of mind) full of gloom or misery; very depressed"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "Jean had disappeared and Mary was in a black mood"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0099760.023"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "(of humour) presenting tragic or harrowing situations in comic terms"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "‘Good place to bury the bodies,’ she joked with black humour"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0099760.024"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "full of anger or hatred"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "Rory shot her a black look"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0099760.025"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "very evil or wicked"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "my soul is steeped in the blackest sin"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0099760.026"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "denoting a covert military procedure"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "clearance for black operations came from the highest political level"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0099760.028"
+                                },
+                                {
+                                    "definitions": [
+                                        "(of goods or work) not to be handled or undertaken by trade union members, especially so as to express support for an industrial dispute elsewhere"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "the union declared the ship black"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0099760.030"
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-gb",
+                    "lexicalCategory": {
+                        "id": "adjective",
+                        "text": "Adjective"
+                    },
+                    "text": "black"
+                },
+                {
+                    "entries": [
+                        {
+                            "pronunciations": [
+                                {
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/black_gb_1.mp3",
+                                    "dialects": [
+                                        "British English"
+                                    ],
+                                    "phoneticNotation": "IPA",
+                                    "phoneticSpelling": "blak"
+                                }
+                            ],
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "black colour or pigment"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "a tray decorated in black and green"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0099760.033",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "black clothes or material, typically worn as a sign of mourning"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "only one or two of the mourners were in black"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0099760.035"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "darkness, especially of night or an overcast sky"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "the only thing visible in the black was the light of the torch"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0099760.036"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "the player of the black pieces in chess or draughts"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "Black's king's defences are somewhat weakened"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0099760.037"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "a black thing, in particular the black ball in snooker."
+                                            ],
+                                            "id": "m_en_gbus0099760.042"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "a member of a dark-skinned people, especially one of African or Australian Aboriginal ancestry."
+                                    ],
+                                    "id": "m_en_gbus0099760.046"
+                                },
+                                {
+                                    "definitions": [
+                                        "the situation of not owing money to a bank or of making a profit in a business operation"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "it is hoped the club will be back in the black by the end of the season"
+                                        },
+                                        {
+                                            "text": "I managed to break even in the first six months—quite a short time for a small business to get into the black"
+                                        },
+                                        {
+                                            "text": "an insurance company operating in the black will be able to pay for further growth"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0099760.049"
+                                },
+                                {
+                                    "definitions": [
+                                        "blackcurrant cordial"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "a rum and black"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0099760.051"
                                 }
                             ]
                         }
@@ -67,32 +323,56 @@
                         "id": "noun",
                         "text": "Noun"
                     },
-                    "text": "muck"
+                    "text": "black"
                 },
                 {
                     "entries": [
                         {
                             "pronunciations": [
                                 {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/muck_gb_1.mp3",
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/black_gb_1.mp3",
                                     "dialects": [
                                         "British English"
                                     ],
                                     "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "mʌk"
+                                    "phoneticSpelling": "blak"
                                 }
                             ],
                             "senses": [
                                 {
                                     "definitions": [
-                                        "spread manure on (land)"
+                                        "make (something) black; blacken"
                                     ],
                                     "examples": [
                                         {
-                                            "text": "half the farm is mucked every year"
+                                            "text": "the house was pocked with bullet holes and blacked by smoke"
                                         }
                                     ],
-                                    "id": "m_en_gbus0666820.018"
+                                    "id": "m_en_gbus0099760.054",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "make (one's face) black with make-up or another substance, as a disguise or to imitate the appearance of a black person"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "revellers would black their faces so as not to be recognized by neighbours or employers"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0099760.060"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "refuse to handle (goods), undertake (work), or have dealings with (a person or business) as a way of taking industrial action"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "the union blacked the film because overtime was not being paid"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0099760.063"
                                 }
                             ]
                         }
@@ -102,19 +382,31 @@
                         "id": "verb",
                         "text": "Verb"
                     },
-                    "text": "muck"
+                    "text": "black"
                 }
             ],
             "type": "headword",
-            "word": "muck"
+            "word": "black"
         }
     ],
-    "word": "muck"
+    "word": "black"
 }
 
-Audio link       : https://audio.oxforddictionaries.com/en/mp3/muck_gb_1.mp3
-Phonetic Spelling: mʌk
+Audio link       : https://audio.oxforddictionaries.com/en/mp3/black_gb_1.mp3
+Phonetic Spelling: blak
 
-Definition: dirt, rubbish, or waste matter
-Example   : I'll just clean the muck off the windscreen
+Definition: of the very darkest colour owing to the absence of or complete absorption of light; the opposite of white
+Example   : black smoke
+
+Definition: belonging to or denoting any human group having dark-coloured skin, especially of African or Australian Aboriginal ancestry
+Example   : black adolescents of Jamaican descent
+
+Definition: characterized by tragic or disastrous events; causing despair or pessimism
+Example   : five thousand men were killed on the blackest day of the war
+
+Definition: denoting a covert military procedure
+Example   : clearance for black operations came from the highest political level
+
+Definition: (of goods or work) not to be handled or undertaken by trade union members, especially so as to express support for an industrial dispute elsewhere
+Example   : the union declared the ship black
 
