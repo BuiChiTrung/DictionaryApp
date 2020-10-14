@@ -1,5 +1,5 @@
 {
-    "id": "cat",
+    "id": "muck",
     "metadata": {
         "operation": "retrieve",
         "provider": "Oxford University Press",
@@ -7,79 +7,57 @@
     },
     "results": [
         {
-            "id": "cat",
+            "id": "muck",
             "language": "en-gb",
             "lexicalEntries": [
                 {
                     "entries": [
                         {
-                            "homographNumber": "100",
                             "pronunciations": [
                                 {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/cat_gb_1.mp3",
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/muck_gb_1.mp3",
                                     "dialects": [
                                         "British English"
                                     ],
                                     "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "kat"
+                                    "phoneticSpelling": "mʌk"
                                 }
                             ],
                             "senses": [
                                 {
                                     "definitions": [
-                                        "a small domesticated carnivorous mammal with soft fur, a short snout, and retractable claws. It is widely kept as a pet or for catching mice, and many breeds have been developed."
-                                    ],
-                                    "id": "m_en_gbus0158200.008",
-                                    "subsenses": [
-                                        {
-                                            "definitions": [
-                                                "a wild animal of the cat family"
-                                            ],
-                                            "examples": [
-                                                {
-                                                    "text": "a marbled cat"
-                                                }
-                                            ],
-                                            "id": "m_en_gbus0158200.015"
-                                        },
-                                        {
-                                            "definitions": [
-                                                "used in names of catlike animals of other families, e.g. native cat, ring-tailed cat."
-                                            ],
-                                            "id": "m_en_gbus0158200.016"
-                                        },
-                                        {
-                                            "definitions": [
-                                                "a malicious or spiteful woman"
-                                            ],
-                                            "examples": [
-                                                {
-                                                    "text": "his mother called me an old cat"
-                                                }
-                                            ],
-                                            "id": "m_en_gbus0158200.020"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "definitions": [
-                                        "(especially among jazz enthusiasts) a man"
+                                        "dirt, rubbish, or waste matter"
                                     ],
                                     "examples": [
                                         {
-                                            "text": "this West Coast cat had managed him since the early 80s"
-                                        },
-                                        {
-                                            "text": "the cat went crazy on the horn"
+                                            "text": "I'll just clean the muck off the windscreen"
                                         }
                                     ],
-                                    "id": "m_en_gbus0158200.026"
-                                },
-                                {
-                                    "definitions": [
-                                        "a short tapered stick used in the game of tipcat."
-                                    ],
-                                    "id": "m_en_gbus0158200.028"
+                                    "id": "m_en_gbus0666820.005",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "farmyard manure, widely used as fertilizer"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "he was covered in cow muck and mud"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0666820.007"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "something regarded as distasteful, unpleasant, or of poor quality"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "why do you let her read this muck?"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0666820.008"
+                                        }
+                                    ]
                                 }
                             ]
                         }
@@ -89,33 +67,32 @@
                         "id": "noun",
                         "text": "Noun"
                     },
-                    "text": "cat"
+                    "text": "muck"
                 },
                 {
                     "entries": [
                         {
-                            "homographNumber": "101",
                             "pronunciations": [
                                 {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/cat_gb_1.mp3",
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/muck_gb_1.mp3",
                                     "dialects": [
                                         "British English"
                                     ],
                                     "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "kat"
+                                    "phoneticSpelling": "mʌk"
                                 }
                             ],
                             "senses": [
                                 {
                                     "definitions": [
-                                        "raise (an anchor) from the surface of the water to the cathead"
+                                        "spread manure on (land)"
                                     ],
                                     "examples": [
                                         {
-                                            "text": "I kept her off the wind and sailing free until I had the anchor catted"
+                                            "text": "half the farm is mucked every year"
                                         }
                                     ],
-                                    "id": "m_en_gbus0158200.032"
+                                    "id": "m_en_gbus0666820.018"
                                 }
                             ]
                         }
@@ -125,132 +102,19 @@
                         "id": "verb",
                         "text": "Verb"
                     },
-                    "text": "cat"
+                    "text": "muck"
                 }
             ],
             "type": "headword",
-            "word": "cat"
-        },
-        {
-            "id": "cat",
-            "language": "en-gb",
-            "lexicalEntries": [
-                {
-                    "entries": [
-                        {
-                            "homographNumber": "200",
-                            "pronunciations": [
-                                {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/cat_gb_1.mp3",
-                                    "dialects": [
-                                        "British English"
-                                    ],
-                                    "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "kat"
-                                }
-                            ],
-                            "senses": [
-                                {
-                                    "examples": [
-                                        {
-                                            "text": "models fitted with a cat as standard"
-                                        }
-                                    ],
-                                    "id": "m_en_gbus0158210.005"
-                                }
-                            ]
-                        }
-                    ],
-                    "language": "en-gb",
-                    "lexicalCategory": {
-                        "id": "noun",
-                        "text": "Noun"
-                    },
-                    "text": "cat"
-                }
-            ],
-            "type": "headword",
-            "word": "cat"
-        },
-        {
-            "id": "cat",
-            "language": "en-gb",
-            "lexicalEntries": [
-                {
-                    "entries": [
-                        {
-                            "homographNumber": "300",
-                            "pronunciations": [
-                                {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/cat_gb_1.mp3",
-                                    "dialects": [
-                                        "British English"
-                                    ],
-                                    "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "kat"
-                                }
-                            ]
-                        }
-                    ],
-                    "language": "en-gb",
-                    "lexicalCategory": {
-                        "id": "noun",
-                        "text": "Noun"
-                    },
-                    "text": "cat"
-                }
-            ],
-            "type": "headword",
-            "word": "cat"
-        },
-        {
-            "id": "CAT",
-            "language": "en-gb",
-            "lexicalEntries": [
-                {
-                    "entries": [
-                        {
-                            "pronunciations": [
-                                {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/cat_gb_1.mp3",
-                                    "dialects": [
-                                        "British English"
-                                    ],
-                                    "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "kat"
-                                }
-                            ],
-                            "senses": [
-                                {
-                                    "definitions": [
-                                        "computer-assisted (or -aided) testing."
-                                    ],
-                                    "id": "m_en_gbus0158190.009"
-                                },
-                                {
-                                    "definitions": [
-                                        "clear air turbulence."
-                                    ],
-                                    "id": "m_en_gbus0158190.006"
-                                }
-                            ]
-                        }
-                    ],
-                    "language": "en-gb",
-                    "lexicalCategory": {
-                        "id": "residual",
-                        "text": "Residual"
-                    },
-                    "text": "CAT"
-                }
-            ],
-            "type": "headword",
-            "word": "CAT"
+            "word": "muck"
         }
     ],
-    "word": "cat"
+    "word": "muck"
 }
 
-Audio link       : https://audio.oxforddictionaries.com/en/mp3/cat_gb_1.mp3
-Phonetic Spelling: kat
+Audio link       : https://audio.oxforddictionaries.com/en/mp3/muck_gb_1.mp3
+Phonetic Spelling: mʌk
+
+Definition: dirt, rubbish, or waste matter
+Example   : I'll just clean the muck off the windscreen
 

@@ -120,7 +120,7 @@
                      </graphic>
                   </Button>
                     </children></HBox>
-                <TextArea fx:id="textArea" prefHeight="307.0" prefWidth="887.0" />
+                <TextArea fx:id="textArea" prefHeight="308.0" prefWidth="887.0" />
                 <HBox fx:id="confirmOrCancelButton" alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="739.0" spacing="10.0">
                     <children>
                         <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#Submit" text="Confirm" textFill="#222f3e" />
