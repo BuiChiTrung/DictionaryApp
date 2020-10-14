@@ -1,5 +1,5 @@
 {
-    "id": "some",
+    "id": "happy",
     "metadata": {
         "operation": "retrieve",
         "provider": "Oxford University Press",
@@ -7,7 +7,7 @@
     },
     "results": [
         {
-            "id": "some",
+            "id": "happy",
             "language": "en-gb",
             "lexicalEntries": [
                 {
@@ -15,253 +15,142 @@
                         {
                             "pronunciations": [
                                 {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/some_gb_2.mp3",
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/happy_gb_1.mp3",
                                     "dialects": [
                                         "British English"
                                     ],
                                     "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "sʌm"
-                                },
-                                {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/some_gb_1.mp3",
-                                    "dialects": [
-                                        "British English"
-                                    ],
-                                    "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "s(ə)m"
+                                    "phoneticSpelling": "ˈhapi"
                                 }
                             ],
                             "senses": [
                                 {
                                     "definitions": [
-                                        "an unspecified amount or number of"
+                                        "feeling or showing pleasure or contentment"
                                     ],
                                     "examples": [
                                         {
-                                            "text": "I made some money running errands"
+                                            "text": "Melissa came in looking happy and excited"
                                         },
                                         {
-                                            "text": "he played some records for me"
-                                        }
-                                    ],
-                                    "id": "m_en_gbus0967710.007"
-                                },
-                                {
-                                    "definitions": [
-                                        "used to refer to someone or something that is unknown or unspecified"
-                                    ],
-                                    "examples": [
-                                        {
-                                            "text": "I was talking to some journalist the other day"
+                                            "notes": [
+                                                {
+                                                    "text": "with clause",
+                                                    "type": "grammaticalNote"
+                                                }
+                                            ],
+                                            "text": "we're just happy that he's still alive"
                                         },
                                         {
-                                            "text": "there must be some mistake"
-                                        },
-                                        {
-                                            "text": "he's in some kind of trouble"
+                                            "notes": [
+                                                {
+                                                    "text": "with infinitive",
+                                                    "type": "grammaticalNote"
+                                                }
+                                            ],
+                                            "text": "they are happy to see me doing well"
                                         }
                                     ],
-                                    "id": "m_en_gbus0967710.011"
-                                },
-                                {
-                                    "definitions": [
-                                        "(used with a number) approximately"
-                                    ],
-                                    "examples": [
-                                        {
-                                            "text": "some thirty different languages are spoken"
-                                        }
-                                    ],
-                                    "id": "m_en_gbus0967710.013"
-                                },
-                                {
-                                    "definitions": [
-                                        "(pronounced stressing ‘some’) a considerable amount or number of"
-                                    ],
-                                    "examples": [
-                                        {
-                                            "text": "he went to some trouble"
-                                        },
-                                        {
-                                            "text": "I've known you for some years now"
-                                        }
-                                    ],
-                                    "id": "m_en_gbus0967710.015"
-                                },
-                                {
-                                    "definitions": [
-                                        "(pronounced stressing ‘some’) at least a small amount or number of"
-                                    ],
-                                    "examples": [
-                                        {
-                                            "text": "he liked some music but generally wasn't musical"
-                                        }
-                                    ],
-                                    "id": "m_en_gbus0967710.017"
-                                },
-                                {
-                                    "definitions": [
-                                        "(pronounced stressing ‘some’) expressing admiration of something notable"
-                                    ],
-                                    "examples": [
-                                        {
-                                            "text": "that was some goal"
-                                        }
-                                    ],
-                                    "id": "m_en_gbus0967710.019",
+                                    "id": "m_en_gbus0450170.009",
                                     "subsenses": [
                                         {
                                             "definitions": [
-                                                "used ironically to express disapproval or disbelief"
+                                                "having a sense of trust and confidence in (a person, arrangement, or situation)"
                                             ],
                                             "examples": [
                                                 {
-                                                    "text": "Mr Power gave his stock reply. Some help!"
+                                                    "text": "he was not happy about the proposals"
                                                 },
                                                 {
-                                                    "text": "not that Jennifer would ever be on the dole. Some chance of that"
+                                                    "text": "I can't say they looked too happy about it, but a deal's a deal"
                                                 }
                                             ],
-                                            "id": "m_en_gbus0967710.020"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "language": "en-gb",
-                    "lexicalCategory": {
-                        "id": "determiner",
-                        "text": "Determiner"
-                    },
-                    "text": "some"
-                },
-                {
-                    "entries": [
-                        {
-                            "pronunciations": [
-                                {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/some_gb_2.mp3",
-                                    "dialects": [
-                                        "British English"
-                                    ],
-                                    "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "sʌm"
-                                },
-                                {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/some_gb_1.mp3",
-                                    "dialects": [
-                                        "British English"
-                                    ],
-                                    "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "s(ə)m"
-                                }
-                            ],
-                            "senses": [
-                                {
-                                    "definitions": [
-                                        "an unspecified number or amount of people or things"
-                                    ],
-                                    "examples": [
-                                        {
-                                            "text": "here are some of our suggestions"
+                                            "id": "m_en_gbus0450170.013"
                                         },
                                         {
-                                            "text": "if you want whisky I'll give you some"
+                                            "definitions": [
+                                                "satisfied with the quality or standard of"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "I'm happy with his performance"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0450170.014"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "willing to do something"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "we will be happy to advise you"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0450170.015"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "used in greetings"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "happy Christmas"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0450170.017"
                                         }
-                                    ],
-                                    "id": "m_en_gbus0967710.023"
+                                    ]
                                 },
                                 {
                                     "definitions": [
-                                        "(pronounced stressing ‘some’) at least a small amount or number of people or things"
+                                        "fortunate and convenient"
                                     ],
                                     "examples": [
                                         {
-                                            "text": "surely some have noticed"
+                                            "text": "he had the happy knack of making people like him"
                                         }
                                     ],
-                                    "id": "m_en_gbus0967710.027"
+                                    "id": "m_en_gbus0450170.020"
+                                },
+                                {
+                                    "definitions": [
+                                        "inclined to use a specified thing excessively or at random"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "they tended to be grenade-happy"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0450170.022"
                                 }
                             ]
                         }
                     ],
                     "language": "en-gb",
                     "lexicalCategory": {
-                        "id": "pronoun",
-                        "text": "Pronoun"
+                        "id": "adjective",
+                        "text": "Adjective"
                     },
-                    "text": "some"
-                },
-                {
-                    "entries": [
-                        {
-                            "pronunciations": [
-                                {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/some_gb_2.mp3",
-                                    "dialects": [
-                                        "British English"
-                                    ],
-                                    "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "sʌm"
-                                },
-                                {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/some_gb_1.mp3",
-                                    "dialects": [
-                                        "British English"
-                                    ],
-                                    "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "s(ə)m"
-                                }
-                            ],
-                            "senses": [
-                                {
-                                    "definitions": [
-                                        "to some extent; quite a lot"
-                                    ],
-                                    "examples": [
-                                        {
-                                            "text": "he needs feeding up some"
-                                        }
-                                    ],
-                                    "id": "m_en_gbus0967710.029"
-                                }
-                            ]
-                        }
-                    ],
-                    "language": "en-gb",
-                    "lexicalCategory": {
-                        "id": "adverb",
-                        "text": "Adverb"
-                    },
-                    "text": "some"
+                    "text": "happy"
                 }
             ],
             "type": "headword",
-            "word": "some"
+            "word": "happy"
         }
     ],
-    "word": "some"
+    "word": "happy"
 }
 
-Audio link       : https://audio.oxforddictionaries.com/en/mp3/some_gb_2.mp3
-Phonetic Spelling: sʌm
+Audio link       : https://audio.oxforddictionaries.com/en/mp3/happy_gb_1.mp3
+Phonetic Spelling: ˈhapi
 
-Definition: an unspecified amount or number of
-Example   : I made some money running errands
+Definition: feeling or showing pleasure or contentment
+Example   : Melissa came in looking happy and excited
 
-Definition: used to refer to someone or something that is unknown or unspecified
-Example   : I was talking to some journalist the other day
+Definition: fortunate and convenient
+Example   : he had the happy knack of making people like him
 
-Definition: (used with a number) approximately
-Example   : some thirty different languages are spoken
-
-Definition: (pronounced stressing ‘some’) a considerable amount or number of
-Example   : he went to some trouble
-
-Definition: (pronounced stressing ‘some’) at least a small amount or number of
-Example   : he liked some music but generally wasn't musical
-
-Definition: (pronounced stressing ‘some’) expressing admiration of something notable
-Example   : that was some goal
+Definition: inclined to use a specified thing excessively or at random
+Example   : they tended to be grenade-happy
 

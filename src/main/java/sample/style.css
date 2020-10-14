@@ -2,6 +2,81 @@
     -fx-background-color: #ff9f43;
 }
 
+#translateTextField {
+    -fx-background-color:  #ffbe76;
+    -fx-font-family: Fondamento;
+}
+
+#textArea {
+    -fx-border-radius: 40px;
+}
+
+#addWordTextField {
+    -fx-background-color: #ffbe76;
+}
+
+#translateButton {
+    -fx-background-color: #ffbe76;
+    -fx-font-family: Fondamento;
+    -fx-font-size: 13;
+}
+
+#addToPersonalDictButton {
+    -fx-background-color: #ffbe76;
+    -fx-font-family: Fondamento;
+    -fx-font-size: 13;
+}
+
+#modifyButton {
+    -fx-background-color: #ff9f43;
+    -fx-font-family: Fondamento;
+    -fx-font-size: 13;
+}
+
+#speakButton {
+    -fx-background-color: #ff9f43;
+    -fx-font-family: Fondamento;
+    -fx-font-size: 13;
+}
+
+#chooseButton {
+    -fx-background-color: #ffbe76;
+    -fx-font-family: Fondamento;
+    -fx-font-size: 13;
+}
+
 #addButton {
-    -fx-background-color: #e67e22;
+    -fx-background-color: #ffbe76;
+    -fx-font-family: Fondamento;
+    -fx-font-size: 13;
+}
+
+#deleteButton {
+    -fx-background-color: #ffbe76;
+    -fx-font-family: Fondamento;
+    -fx-font-size: 13;
+}
+
+#searchButton {
+    -fx-background-color: #ffbe76;
+    -fx-font-family: Fondamento;
+    -fx-font-size: 13;
+}
+
+#confirmButton {
+    -fx-background-color: #ffbe76;
+    -fx-font-family: Fondamento;
+    -fx-font-size: 13;
+}
+
+#cancelButton {
+    -fx-background-color: #ffbe76;
+    -fx-font-family: Fondamento;
+    -fx-font-size: 13;
+}
+
+#footer {
+    -fx-font-family: Fondamento;
+    -fx-font-size: 13;
+
 }

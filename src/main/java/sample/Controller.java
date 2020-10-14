@@ -54,9 +54,6 @@ public class Controller{
     private TextField addWordTextField;
 
     @FXML
-    private Label addWordLabel;
-
-    @FXML
     private Button confirmButton;
 
     @FXML
@@ -89,7 +86,8 @@ public class Controller{
     private BorderPane window;
 
     @FXML
-    private TextArea instruction;
+    private Label footer;
+
 
     private String currentMode;
     private String currentWord;
@@ -111,7 +109,6 @@ public class Controller{
         modifyButton.setVisible(true);
         addToPersonalDictButton.setVisible(true);
         speakButton.setVisible(true);
-        instruction.setVisible(true);
     }
     public void setAddPersonalDictionaryMode() {
         leftSide.setVisible(false);
@@ -131,7 +128,6 @@ public class Controller{
         confirmOrCancelButton.setVisible(true);
         addToPersonalDictButton.setVisible(false);
         speakButton.setVisible(false);
-        instruction.setVisible(false);
     }
     public void setModifyPersonalDictionaryMode() {
         leftSide.setVisible(true);
@@ -149,7 +145,6 @@ public class Controller{
         confirmOrCancelButton.setVisible(true);
         addToPersonalDictButton.setVisible(false);
         speakButton.setVisible(false);
-        instruction.setVisible(false);
     }
     public void initialize() throws SQLException {
         personalDictionary.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
@@ -158,9 +153,6 @@ public class Controller{
         setTranslateMode();
         ArrayList<String> favoriteWord = DictionaryManager.selectFavoriteWords();
         personalDictionary.getItems().addAll(favoriteWord);
-        instruction.setEditable(false);
-        instruction.setWrapText(true);
-        instruction.setMouseTransparent(true);
         currentMode = "Translate";
         translateTextField.textProperty().addListener(new ChangeListener<Object>() {
             @Override
