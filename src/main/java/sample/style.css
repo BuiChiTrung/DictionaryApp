@@ -8,11 +8,24 @@
 }
 
 #textArea {
-    -fx-border-radius: 40px;
+    -fx-font-family: Sriracha;
+    -fx-background-image: url("text-area-background.jpeg");
+}
+
+#personalDictionary {
+    -fx-font-family: Sriracha;
+}
+
+#listSuggestWord {
+    -fx-font-family: Sriracha;
 }
 
 #addWordTextField {
     -fx-background-color: #ffbe76;
+}
+
+#chooseAddWord {
+    -fx-font-family: Sriracha;
 }
 
 #translateButton {
@@ -22,9 +35,11 @@
 }
 
 #addToPersonalDictButton {
-    -fx-background-color: #ffbe76;
+    -fx-background-color: #ff9f43;
     -fx-font-family: Fondamento;
     -fx-font-size: 13;
+    -fx-border-color: #ffbe76;
+    -fx-border-radius: 90%;
 }
 
 #modifyButton {

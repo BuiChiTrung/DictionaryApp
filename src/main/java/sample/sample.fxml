@@ -9,9 +9,15 @@
 
 <BorderPane fx:id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyPressed" prefHeight="598.0" prefWidth="1200.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <top>
-        <HBox fx:id="translateSide" alignment="CENTER" prefHeight="51.0" prefWidth="990.0" spacing="20.0" BorderPane.alignment="CENTER">
+        <HBox fx:id="translateSide" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="93.0" prefWidth="1058.0" spacing="20.0" BorderPane.alignment="CENTER">
             <children>
-                <TextField fx:id="translateTextField" prefHeight="31.0" prefWidth="476.0" promptText="Search for an English word" />
+            <ImageView fx:id="logo" fitHeight="53.0" fitWidth="172.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 80%;">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Region prefHeight="93.0" prefWidth="71.0" />
+                <TextField fx:id="translateTextField" prefHeight="31.0" prefWidth="711.0" promptText="Search for an English word" />
                 <Button fx:id="translateButton" mnemonicParsing="false" onAction="#Submit" prefHeight="33.0" prefWidth="52.0" textFill="#222f3e">
                     <font>
                         <Font name="System Bold" size="15.0" />
@@ -24,6 +30,12 @@
                   </ImageView>
                </graphic>
                 </Button>
+            <Region prefHeight="93.0" prefWidth="5.0" />
+            <ImageView fitHeight="88.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@flag.png" />
+               </image>
+            </ImageView>
             </children>
             <opaqueInsets>
                 <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
@@ -33,20 +45,41 @@
     <right>
         <VBox alignment="TOP_CENTER" prefHeight="518.0" prefWidth="134.0" spacing="10.0" BorderPane.alignment="CENTER">
             <children>
-                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="126.0" text="Favorite Words" textAlignment="CENTER" textFill="#222f3e">
+            <Region prefHeight="60.0" prefWidth="134.0" />
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="77.0" prefWidth="134.0" text="Favorite" textAlignment="CENTER" textFill="#222f3e">
                <font>
-                  <Font name="Fondamento Regular" size="15.0" />
+                  <Font name="Fondamento Regular" size="20.0" />
                </font></Label>
-                <ListView fx:id="personalDictionary" prefHeight="327.0" prefWidth="107.0" />
-                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#Submit" prefHeight="2.0" prefWidth="60.0" text="Add" textFill="#222f3e">
-               <font>
-                  <Font name="Fondamento Regular" size="14.0" />
-               </font></Button>
-                  <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#Submit" prefHeight="24.0" prefWidth="57.0" text="Delete" textFill="#222f3e">
-               <font>
-                  <Font name="Fondamento Regular" size="14.0" />
-               </font></Button>
-                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#Submit" prefHeight="29.0" prefWidth="58.0" text="Search" textFill="#222f3e" />
+                <ListView fx:id="personalDictionary" prefHeight="337.0" prefWidth="134.0" />
+            <HBox prefHeight="13.0" prefWidth="134.0">
+               <children>
+                        <Button fx:id="addButton" mnemonicParsing="false" onAction="#Submit" prefHeight="30.0" prefWidth="66.0" text="Add" textFill="#222f3e">
+                     <font>
+                        <Font name="Fondamento Regular" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@add-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#Submit" prefHeight="29.0" prefWidth="69.0" text="Del" textFill="#222f3e">
+                     <font>
+                        <Font name="Fondamento Regular" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@minus-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#Submit" prefHeight="29.0" prefWidth="138.0" text="Search" textFill="#222f3e" />
             </children>
         </VBox>
     </right>
@@ -55,7 +88,8 @@
             <children>
                 <HBox fx:id="chooseAddWord" alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="893.0" spacing="10.0">
                     <children>
-                        <TextField fx:id="addWordTextField" prefHeight="25.0" prefWidth="506.0" promptText="Enter new word" />
+                  <Label prefHeight="23.0" prefWidth="92.0" text="English Word:" />
+                        <TextField fx:id="addWordTextField" prefHeight="33.0" prefWidth="710.0" promptText="Enter new word" />
                     </children>
                 </HBox>
                 <HBox alignment="CENTER_RIGHT" prefHeight="13.0" prefWidth="739.0" spacing="10.0">
@@ -86,7 +120,7 @@
                      </graphic>
                   </Button>
                     </children></HBox>
-                <TextArea fx:id="textArea" prefHeight="340.0" prefWidth="872.0" />
+                <TextArea fx:id="textArea" prefHeight="307.0" prefWidth="887.0" />
                 <HBox fx:id="confirmOrCancelButton" alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="739.0" spacing="10.0">
                     <children>
                         <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#Submit" text="Confirm" textFill="#222f3e" />
@@ -109,15 +143,15 @@
         <VBox fx:id="leftSide" alignment="TOP_CENTER" prefHeight="520.0" prefWidth="144.0" spacing="10.0" BorderPane.alignment="CENTER">
             <children>
             <Region prefHeight="14.0" prefWidth="144.0" />
-                <Button fx:id="chooseButton" alignment="CENTER" mnemonicParsing="false" onAction="#Submit" prefHeight="36.0" prefWidth="144.0" text="Choose" textFill="#222f3e" />
-                <ListView fx:id="listSuggestWord" prefHeight="338.0" prefWidth="144.0" />
+                <Button fx:id="chooseButton" alignment="CENTER" mnemonicParsing="false" onAction="#Submit" prefHeight="49.0" prefWidth="144.0" text="Choose" textFill="#222f3e" />
+                <ListView fx:id="listSuggestWord" prefHeight="306.0" prefWidth="144.0" />
             </children>
             <BorderPane.margin>
                 <Insets left="5.0" top="10.0" />
             </BorderPane.margin></VBox>
     </left>
    <bottom>
-      <Label fx:id="footer" prefHeight="19.0" prefWidth="869.0" text="2020 Aplus Dictionary. All right reserved" textFill="#222f3e" BorderPane.alignment="CENTER">
+      <Label fx:id="footer" prefHeight="19.0" prefWidth="869.0" text="2020 Aplus Dictionary by straw and superkink. All right reserved" textFill="#222f3e" BorderPane.alignment="CENTER">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
