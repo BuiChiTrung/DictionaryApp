@@ -231,14 +231,14 @@ public class Controller{
         if(event.getSource() == addToPersonalDictButton) {
             if(currentWord.length() > 0 && !personalDictionary.getItems().contains(currentWord)) {
                 personalDictionary.getItems().add(currentWord);
-                //DictionaryManager.addNewWord(new Word(currentWord, currentDefinition));
                 DictionaryManager.addToFavorite(currentWord);
             }
         }
         if(event.getSource() == modifyButton) {
-            if(translateTextField.getText().length() > 0 && textArea.getText().length() > 0) {
+            if(currentWord.length() > 0) {
                 setModifyPersonalDictionaryMode();
-                textArea.setEditable(true);
+                textArea.setText(DictionaryManager.getDefinition(currentWord));
+                translateTextField.setText(currentWord);
             }
         }
 

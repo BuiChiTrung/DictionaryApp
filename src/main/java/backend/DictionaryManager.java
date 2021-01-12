@@ -182,6 +182,22 @@ public class DictionaryManager {
      * @param args no args
      * @throws SQLException exception
      */
+    public static String getDefinition(String enWord) throws SQLException {
+        String word = enWord.toString();
+        if (!wordInDict(word)) {
+            word = word.toLowerCase();
+            if(!wordInDict(word)) {
+                return "Not found";
+            }
+        }
+        // get info in database
+        String command = "SELECT * FROM words WHERE enWord =" + "'" + word + "';";
+        ResultSet rs = st.executeQuery(command);
+        rs.next();
+
+        String dbResponse = rs.getString("viWord");
+        return dbResponse;
+    }
     public static void main(String[] args) throws SQLException, IOException {
 
 //        DictionaryManager.addNewWord(new Word("aaaa", "tìnhyêu"));

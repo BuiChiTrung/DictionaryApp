@@ -1,5 +1,5 @@
 {
-    "id": "muck",
+    "id": "happy",
     "metadata": {
         "operation": "retrieve",
         "provider": "Oxford University Press",
@@ -7,7 +7,7 @@
     },
     "results": [
         {
-            "id": "muck",
+            "id": "happy",
             "language": "en-gb",
             "lexicalEntries": [
                 {
@@ -15,106 +15,142 @@
                         {
                             "pronunciations": [
                                 {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/muck_gb_1.mp3",
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/happy_gb_1.mp3",
                                     "dialects": [
                                         "British English"
                                     ],
                                     "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "mʌk"
+                                    "phoneticSpelling": "ˈhapi"
                                 }
                             ],
                             "senses": [
                                 {
                                     "definitions": [
-                                        "dirt, rubbish, or waste matter"
+                                        "feeling or showing pleasure or contentment"
                                     ],
                                     "examples": [
                                         {
-                                            "text": "I'll just clean the muck off the windscreen"
+                                            "text": "Melissa came in looking happy and excited"
+                                        },
+                                        {
+                                            "notes": [
+                                                {
+                                                    "text": "with clause",
+                                                    "type": "grammaticalNote"
+                                                }
+                                            ],
+                                            "text": "we're just happy that he's still alive"
+                                        },
+                                        {
+                                            "notes": [
+                                                {
+                                                    "text": "with infinitive",
+                                                    "type": "grammaticalNote"
+                                                }
+                                            ],
+                                            "text": "they are happy to see me doing well"
                                         }
                                     ],
-                                    "id": "m_en_gbus0666820.005",
+                                    "id": "m_en_gbus0450170.009",
                                     "subsenses": [
                                         {
                                             "definitions": [
-                                                "farmyard manure, widely used as fertilizer"
+                                                "having a sense of trust and confidence in (a person, arrangement, or situation)"
                                             ],
                                             "examples": [
                                                 {
-                                                    "text": "he was covered in cow muck and mud"
+                                                    "text": "he was not happy about the proposals"
+                                                },
+                                                {
+                                                    "text": "I can't say they looked too happy about it, but a deal's a deal"
                                                 }
                                             ],
-                                            "id": "m_en_gbus0666820.007"
+                                            "id": "m_en_gbus0450170.013"
                                         },
                                         {
                                             "definitions": [
-                                                "something regarded as distasteful, unpleasant, or of poor quality"
+                                                "satisfied with the quality or standard of"
                                             ],
                                             "examples": [
                                                 {
-                                                    "text": "why do you let her read this muck?"
+                                                    "text": "I'm happy with his performance"
                                                 }
                                             ],
-                                            "id": "m_en_gbus0666820.008"
+                                            "id": "m_en_gbus0450170.014"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "willing to do something"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "we will be happy to advise you"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0450170.015"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "used in greetings"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "happy Christmas"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0450170.017"
                                         }
                                     ]
-                                }
-                            ]
-                        }
-                    ],
-                    "language": "en-gb",
-                    "lexicalCategory": {
-                        "id": "noun",
-                        "text": "Noun"
-                    },
-                    "text": "muck"
-                },
-                {
-                    "entries": [
-                        {
-                            "pronunciations": [
-                                {
-                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/muck_gb_1.mp3",
-                                    "dialects": [
-                                        "British English"
-                                    ],
-                                    "phoneticNotation": "IPA",
-                                    "phoneticSpelling": "mʌk"
-                                }
-                            ],
-                            "senses": [
+                                },
                                 {
                                     "definitions": [
-                                        "spread manure on (land)"
+                                        "fortunate and convenient"
                                     ],
                                     "examples": [
                                         {
-                                            "text": "half the farm is mucked every year"
+                                            "text": "he had the happy knack of making people like him"
                                         }
                                     ],
-                                    "id": "m_en_gbus0666820.018"
+                                    "id": "m_en_gbus0450170.020"
+                                },
+                                {
+                                    "definitions": [
+                                        "inclined to use a specified thing excessively or at random"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "they tended to be grenade-happy"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0450170.022"
                                 }
                             ]
                         }
                     ],
                     "language": "en-gb",
                     "lexicalCategory": {
-                        "id": "verb",
-                        "text": "Verb"
+                        "id": "adjective",
+                        "text": "Adjective"
                     },
-                    "text": "muck"
+                    "text": "happy"
                 }
             ],
             "type": "headword",
-            "word": "muck"
+            "word": "happy"
         }
     ],
-    "word": "muck"
+    "word": "happy"
 }
 
-Audio link       : https://audio.oxforddictionaries.com/en/mp3/muck_gb_1.mp3
-Phonetic Spelling: mʌk
+Audio link       : https://audio.oxforddictionaries.com/en/mp3/happy_gb_1.mp3
+Phonetic Spelling: ˈhapi
 
-Definition: dirt, rubbish, or waste matter
-Example   : I'll just clean the muck off the windscreen
+Definition: feeling or showing pleasure or contentment
+Example   : Melissa came in looking happy and excited
+
+Definition: fortunate and convenient
+Example   : he had the happy knack of making people like him
+
+Definition: inclined to use a specified thing excessively or at random
+Example   : they tended to be grenade-happy
 
